@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+    button,body{
+        background: #262626;
+        width: 99%;
+        height: 98vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .counter-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #counter {
+        font-size: 32px;
+        background: #eee;
+        min-width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+
+    #reset {
+        background: url("../static/img/resetButton.png") no-repeat;
+        cursor: pointer;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+    }
+</style>
+<script>
+    //     var counterWrapper = document.getElementById('counter')
+    //     var counterReset = document.getElementById('reset')
+    //     var counter = 0
+    //
+    //     document.addEventListener("keydown", (e) => {
+    //         if(e.keyCode === 32) {
+    //             counter++
+    //             counterWrapper.innerText = counter
+    //         }
+    //         else if(e.keyCode === 8) {
+    //             if(counter > 0) {
+    //                 counter--
+    //                 counterWrapper.innerText = counter
+    //             }
+    //         }
+    //     })
+    //
+    //     counterReset.addEventListener("click", () => {
+    //         counter = 0
+    //         counterWrapper.innerText = counter
+    // })
+    var counter = 0
+    var i = 0
+    function changevalue(){
+        document.getElementById("counter").innerHTML = i;
+        i++
+    }
+
+</script>
+
+<body>
+<button style="height: 100%; width:100%;" class="numberValue" onclick="changevalue()">
+    <div class="counter-wrapper">
+        <p id="counter">0</p>
+        <button id="reset"></button>
+
+    </div>
+</button>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<div
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ethan's About Me + Greet</title>
+</head>
+<body style="background-color:grey;">
+</body>
+</html>
+
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif; background-color:gray;">
+
+    <div class="col-12">
+     <a class=""col-1" style="color: #000064"<p>Hello, {{name}}! You're speaking with one of Ethan's clones, enter a name so I can say hello!</p><a>
+    </div>
+    <!-- test -->
+    <div class="col-12">
+        <form action="/ethangreet" id="greet" method="POST" >
+            <label for="name" <a class=""col-1" style="color: #000064FF">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+
+    <div class="col-12">
+        <img src="/static/assets/hellocatV2.jpg" style="height: 400px" >
+    </div>
+
+</div>
+
+<div>
+    <img src="/static/assets/Ethan%20Picture.jpg">
+    <p style="color: #000064"> Hi, I'm Ethan, I'm 15 years old, and I run track in spring.
+</div>
+
+
+<!-- display code from GitHub -->
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="col-8">
+        <p style="color: #000064">Jinja2 pre-processor code.  This code shows a variable name within double curly/squiggly brackets, or the variable syntax of Jinja2.  The variable is replaced with the value before the HTML is given to the browser by Flask/Jinja2 (a pre-processor means a step before code is transferred to another tool or engine.</p>
+        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Ftemplates%2Fgreet.html%23L8-L8&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+    </div>
+
+    <div class="col-8">
+        <p style="color: #000064">HTML input form.  A form action gathers input interacts between HTML and the backend server, POST via HTTP is the method of interaction.</p>
+        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Ftemplates%2Fgreet.html%23L12-L16&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+    </div>
+
+    <div class="col-8">
+        <p style="color: #000064">Python backend <a href="https://github.com/nighthawkcoders/nighthawk_csp/blob/master/main.py#L17-L25">COPY CODE</a>.  This code, contained in a Python function, sets up the "name=" variable. The name variable is passed to the HTML (greet.html) via Flask.  This code contains "if statements",  these statements are referred to as selection statements by College Board.  Most developers refer to if statements as conditionals.  This code tests to see if input is entered from the HTML Form.  If input is set then Python variable "name" set the Jinja2 variable "name" (name=name) with the value from the HTML form.  The default/else condition (last statement in function), sets "name" to a constant value name="World". Conditional logic is fundamental to all programming languages. Observe this closely, make sure you understand it thoroughly.</p>
+        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fmain.py%23L17-L25&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+    </div>
+
+    <div class="col-8">
+        "<p style="color: #000064">HTML block <a href="https://github.com/nighthawkcoders/nighthawk_csp/blob/master/templates/greet.html#L5-L23">COPY CODE</a>.  The HTML pre-processor and input form put together. Try view-source through browser to see what happens to pre-processor code.  Tech Talk mini-lab will be to add "greet" to your project.</p>
+        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Ftemplates%2Fgreet.html%23L5-L23&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+    </div>
+</div>

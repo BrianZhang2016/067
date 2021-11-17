@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Genshin Impact Review Page" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+<style>
+    table, th, td {
+        border:2px solid black;
+        text-align: center;
+    }
+    #deez{
+        margin-right:8%;
+    }
+</style>
+<body>
+<br>
+
+<div>
+    <img style="margin-left:35%; width:400px" src="static/assets/genshinTITLE.png">
+</div>
+<br>
+
+<div class="container" id="deez">
+    <div class="row">
+        <div class="col-sm-4">
+            <img style="width:600px; margin-left:-32.5%" src="static/assets/genshinTRAILER.jpg">
+        </div>
+        <div class="col-sm-8">
+            <p style="font-size:28px; margin-left:25%;">
+                Genshin Impact is a fun adventure game where you can collect characters and explore a massive world filled with quests. Level up all the different characters and weapons and learn about all the different parts of the huge map while having fun in multiplayer.
+            </p>
+        </div>
+    </div>
+</div>
+<br>
+
+<div>
+    <table style="margin-right:auto; margin-left:auto; width:65%">
+        <tr>
+            <th style="font-size:30px">Pros</th>
+            <th style="font-size:30px">Cons</th>
+        </tr>
+        <tr style="font-size:20px">
+            <td>Multiplayer
+                <br>Mobile or computer
+                <br>Free to play</td>
+            <td>Lots of in app purchases</td>
+        </tr>
+    </table>
+</div>
+<br>
+
+<div>
+    <p style="font-size:20px; text-align:center">Available on: Mobile, Playstation, and PC</p>
+</div>
+<br>
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Hearthstone Review Page" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+    <style>
+        table, th, td {
+            border:2px solid black;
+            text-align: center;
+        }
+        #deez{
+            margin-right:8%;
+        }
+    </style>
+    <body>
+    <br>
+
+    <div>
+        <img style="margin-left:35%" src="static/assets/Hearthstone_2016_logo.png">
+    </div>
+    <br>
+
+    <div class="container" id="deez">
+        <div class="row">
+            <div class="col-sm-4">
+                <img style="width:600px; margin-left:-32.5%" src="static/assets/hearthstone2.jpeg">
+            </div>
+            <div class="col-sm-8">
+                <p style="font-size:28px; margin-left:25%;">
+                    The game is a turn-based card game between two opponents, using constructed decks of 30 cards along with a selected hero with a unique power. Players use their limited mana crystals to play abilities or summon minions to attack the opponent, with the goal of destroying the opponent's hero.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <table style="margin-right:auto; margin-left:auto; width:65%">
+            <tr>
+                <th style="font-size:30px">Pros</th>
+                <th style="font-size:30px">Cons</th>
+            </tr>
+            <tr style="font-size:20px">
+                <td>Limits the number of certain cards to be allowed into a deck (Legendary)
+                    <br>There are some truly creative concepts for cards (Like the quest cards)
+                    <br>Quests being able to be completed with friends is cool.</td>
+                <td>Extremely high skill ceiling</td>
+            </tr>
+        </table>
+    </div>
+
+    <button style="font-size:30px; background-color: #cc0000; margin-left:30%"><a href="hearthstoneapi"> Click here to go to the Hearthstone Class/Information List! </a></button>
+    <br>
+
+    <div>
+        <p style="font-size:20px; text-align:center">Available on: PC and Mobile</p>
+    </div>
+    <br>
+
+    </body>
+{% endblock %}
+</html>

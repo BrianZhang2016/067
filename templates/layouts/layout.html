@@ -1,0 +1,193 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<html lang="en">
+<!-- Head, think of things that are more meta or format oriented -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Common style for site -->
+    <style>
+        :root{
+            --yellow: #f1d483;
+            --green: #9daf9b;
+            --purple: #a59aaf;
+            --lblue: #6084a3;
+            --dblue: #2b425b;
+            --gray: #363d47;
+            --white: whitesmoke;
+            --black: black;
+            --grey: grey;
+        }
+
+        html, body{
+            margin: 0;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: var(--purple);
+            color: var(--black);
+        }
+
+        .dark-mode {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        a {
+            color: midnightblue;
+        }
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+        .fa-youtube-play:hover{
+            color: #cc0000;
+        }
+
+        .fa-twitter:hover{
+            color: #1da1f2;
+        }
+
+        .fa-github:hover{
+            color: #000000;
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: white;
+            font-size: 2.5em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .row{
+            margin: auto;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+            color: var(--lblue);
+        }
+
+    </style>
+
+    <!-- Use this block for page specific meta data -->
+    {% block meta %}
+    <title>Team PeanutButter</title>
+    {% endblock %}
+
+</head>
+
+
+<body style="font-family: gilroyLIGHT,serif; color: var(--gray);" >
+<!-- Bootstrap Navigation Code -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(185,142,94);">
+    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <!-- stub is shown using the name of the route -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!--root menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mini Labs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/Mini-labs/">Team Video</a>
+                            <a class="dropdown-item" href="/wireframe/">WireFrames</a>
+                            <a class="dropdown-item" href="/rgb">RGB</a>
+                            <a class="dropdown-item" href={{ url_for('binary') }}>Binary Mini Lab</a>
+                            <a class="dropdown-item" href="/stub">Stub</a>
+                            <a class="dropdown-item" href={{ url_for('colorCode') }}>Color Code</a>
+                            <a class="dropdown-item" href={{ url_for('logicGates') }}>Logic Gates</a>
+                            <a class="dropdown-item" href={{ url_for('tictactoe') }}>Tic Tac Toe</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Greet Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href={{ url_for('zachgreet') }}>Zachary's Greet</a>
+                            <a class="dropdown-item" href="/ethangreet">Ethan's Greet</a>
+                            <a class="dropdown-item" href="/reem">Reem's Greet</a>
+                            <a class="dropdown-item" href={{ url_for('leogreet') }}>Leo's Greet</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Games
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/spaceClick">Space Click</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            APIs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/joke">Joke</a>
+                            <a class="dropdown-item" href="/jokes">Jokes</a>
+                            <a class="dropdown-item" href="/covid19">Covid-19</a>
+                            <a class="dropdown-item" href="/arcadeAPI">arcade API</a>
+                            <a class="dropdown-item" href="/PokemonGo">PokemonGo</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENT Block, utilize this block for page specific content  -->
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

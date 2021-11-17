@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+<style>
+    table, td, th {
+        border: 3px solid var(--white);
+    }
+    td, th {
+        text-align: center;
+    }
+
+</style>
+<div class="container-fluid" style="background-image: url('/static/assets/3586184.jpeg'); height: available; width: 100%; background-repeat: no-repeat; background-attachment: fixed">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center; color: white;">
+            <h1><strong>Top Games API</strong></h1>
+        </div>
+
+
+        <!-- Sequence -->
+
+        <div class="col-12" style="text-align: center; ">
+            <table style="margin: 2%">
+                <tr>
+                    <th style="color: white;">Game number</th>
+                    <th style="width: 125px; color: white;">Title</th>
+                    <th style="color: white">Short Description</th>
+                    <th style="width: 125px; color: white;">Game URL</th>
+                    <th style="width: 100px; color: white;">Genre</th>
+                    <th style="width: 125px; color: white;">Platform</th>
+                    <th style="color: white;">Publisher</th>
+                    <th style="color: white;">Developer</th>
+                    <th style="width: 100px; color: white;">Release Date</th>
+                </tr>
+                {% for game in Games %}
+                <tr>
+                    <td style="color: white;">{{loop.index}}</td>
+                    <td style="color: white;">{{game['title']}}</td>
+                    <td style="color: white;">{{game['short_description']}}</td>
+                    <td style="color: white;"><a style="color: dodgerblue;" href="{{game['game_url']}}">{{game['title']}}</a></td>
+                    <td style="color: white;">{{game['genre']}}</td>
+                    <td style="color: white;">{{game['platform']}}</td>
+                    <td style="color: white;">{{game['publisher']}}</td>
+                    <td style="color: white;">{{game['developer']}}</td>
+                    <td style="color: white;">{{game['release_date']}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
