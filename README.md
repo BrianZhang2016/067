@@ -19,7 +19,7 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
-| Leo Sun + Stanley Yan | [Journal](https://docs.google.com/document/d/1iEzHgbfWVNqOpFYsCOu6BfKV71yTtvkz7QME-QIYMnQ/edit) |
+| Leo Sun + Stanley Yan | [Journal](https://docs.google.com/document/d/1RjCabf4uYDJ0jTDEKXNHbvnHPhlOszNcla_7WAyO1Cg/edit?usp=sharing) |
 | Zach Ye + Brian Zhang | [Journal](https://docs.google.com/document/d/1jcKg-ePg4ypQtN7OBywRdvh7gPhAji-Yp8DZ7MjgxEw/edit?usp=sharing) |
 
 ## Teammates
