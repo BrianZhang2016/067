@@ -1,29 +1,26 @@
-# Hackermen
+# 067
 
 ## Purpose of Project
-#### Our project is a social media site for Valorant clips. We had originally intended to add a function for uploading videos, uploading comments, and having a like button, similar to other social media sites like Youtube and Reddit. However, at our current stage we cannot currently do that, so we instead created an informational site that has the potential to be molded into the site we envisioned. It’s purpose is to have a site specific for Valorant clips, so we can have a community that revolves around a game that we all enjoy.
+#### Our project is a Movie and Show review
 
 ## Purpose of README
 #### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
 
-## Picture of us
-![Photo on 11-12-21 at 11 25 AM](https://user-images.githubusercontent.com/89236893/141523648-69c6ed44-5edb-475b-bfeb-5a5c0c934081.jpg)
-
 
 ## Table of Contents
-- [Week 9](https://github.com/Reinhardtlotter/flask_portfolio/edit/main/README.md#week9)
+
 
 ## Contributors
 ---------------------------------------
 
 Contributors: https://github.com/Reinhardtlotter/flask_portfolio/graphs/contributors
 
-Scrum Board: https://github.com/Reinhardtlotter/flask_portfolio/projects/1
+Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
-| Nathan Manangan + Derrick Huang | [Journal](https://docs.google.com/document/d/1iEzHgbfWVNqOpFYsCOu6BfKV71yTtvkz7QME-QIYMnQ/edit) |
-| Reinhardt Lotter + Brian Zhang | [Journal](https://docs.google.com/document/d/1nQK3_Lvh3XT3Vwb-PrkNCrcTUAUlYSsifrXgkbSCXvw/edit) |
+| Leo Sun + Stanley Yan | [Journal](https://docs.google.com/document/d/1iEzHgbfWVNqOpFYsCOu6BfKV71yTtvkz7QME-QIYMnQ/edit) |
+| Zach Ye + Brian Zhang | [Journal](https://docs.google.com/document/d/1jcKg-ePg4ypQtN7OBywRdvh7gPhAji-Yp8DZ7MjgxEw/edit?usp=sharing) |
 
 ## Teammates
 ---------------------------------------
