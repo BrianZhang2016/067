@@ -1,7 +1,7 @@
 # 067
 
 ## Purpose of Project
-#### Our project is a Movie and Show review
+#### Our project is a Movie and Show review page. The purpose of this is to help others discover shows and movies that they might enjoy. 
 
 ## Purpose of README
 #### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
