@@ -1,10 +1,11 @@
 # import "packages" from flask
-from flask import Flask, render_template,json, request
+from flask import Flask, render_template, request
+from flask import Blueprint, render_template
+from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+import json
 import requests
 
 # create a Flask instance
-from algorithms.image import image_data
-
 app = Flask(__name__)
 
 
@@ -14,158 +15,273 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-@app.route('/binary', methods=['GET', 'POST'])
-def binary():
-    if request.form:
-        bits = request.form.get("bits")
-        if len(bits) != 0:  # input field has content
-            return render_template("binary.html", bits=int(bits))
-        # starting and empty input default
-    return render_template("binary.html", bits=12)
-
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
-
 
 @app.route('/stub/')
-def stub():
+def Stub():
     return render_template("stub.html")
 
-@app.route('/greet', methods=['GET', 'POST'])
-def greet():
+@app.route('/zachgreet', methods=['GET', 'POST'])
+def zachgreet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("greet.html", name=name)
+            return render_template("zachary_greet.html", name=name)
     # starting and empty input default
-    return render_template("greet.html", name="World")
+    return render_template("zachary_greet.html", name="World")
 
-@app.route('/grid')
-def grid():
-    return render_template("grid.html")
+@app.route('/ethangreet', methods=['GET', 'POST'])
+def ethangreet():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("ethangreet.html", name=name)
+    # starting and empty input default
+    return render_template("ethangreet.html", name="World")
 
-@app.route('/wireframes')
-def wireframes():
-    return render_template("wireframes.html")
+@app.route('/leogreet', methods=['GET', 'POST'])
+def leogreet():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("leohtml.html", name=name)
+    # starting and empty input default
+    return render_template("leohtml.html", name="World")
 
-@app.route('/aboutme')
-def aboutme():
-    return render_template("aboutme.html")
 
-@app.route('/week3')
-def week3():
-    return render_template("week3.html")
+@app.route('/reem', methods=['GET', 'POST'])
+def reem():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("reem.html", name=name)
+    # starting and empty input default
+    return render_template("reem.html", name="World")
 
-@app.route('/rgb', methods=["GET", "POST"])
+@app.route('/Mini-labs/')
+def video():
+    return render_template("Mini-labs.html")
+
+@app.route('/signedaddition/')
+def signedaddition():
+    return render_template("signedaddition.html")
+
+@app.route('/binary/', methods = ['GET', 'POST'])
+def binary():
+    BITS = 4
+    if request.method == 'POST':
+        BITS =  int(request.form['BITS'])
+    # starting and empty input default
+    return render_template("binary.html", BITS=BITS)
+
+@app.route('/about_us/')
+def about_us():
+    return render_template("about_us.html")
+
+@app.route('/wireframe/')
+def wireframe():
+    return render_template("wireframe.html")
+
+@app.route('/rgb/')
 def rgb():
-    return render_template("rgb.html", images=image_data())
+    return render_template('rgb.html', images=image_data())
 
-@app.route('/list')
-def list():
-    return render_template("list.html")
+@app.route("/binaryaddition")
+def binaryaddition():
+    return render_template("binaryaddition.html")
 
-@app.route('/colorcodes')
-def colorcodes():
-    return render_template("colorcodes.html")
+@app.route("/colorCode")
+def colorCode():
+    return render_template("colorCode.html")
+
+@app.route("/logicGates")
+def logicGates():
+    return render_template("logicGates.html")
+
+@app.route("/spaceClick")
+def spaceClick():
+    return render_template("spaceClick.html")
+
+@app.route("/arcade")
+def arcade():
+    return render_template("arcade.html")
+
+@app.route("/reviewPageHollowKnight")
+def reviewPageHollowKnight():
+    return render_template("reviewPageHollowKnight.html")
+
+@app.route("/reviewPageMinecraft")
+def reviewPageMinecraft():
+    return render_template("reviewPageMinecraft.html")
+
+@app.route("/reviewPageRocketLeague")
+def reviewPageRocketLeague():
+    return render_template("reviewPageRocketLeague.html")
+
+@app.route("/reviewPageValorant")
+def reviewPageValorant():
+    return render_template("reviewPageValorant.html")
+
+@app.route("/reviewPageAmongUs")
+def reviewPageAmongUs():
+    return render_template("reviewPageAmongUs.html")
+
+@app.route("/reviewPageFortnite")
+def reviewPageFortnite():
+    return render_template("reviewPageFortnite.html")
+
+@app.route("/reviewPageSeaOfThieves")
+def reviewPageSeaOfThieves():
+    return render_template("reviewPageSeaOfThieves.html")
+
+@app.route("/reviewPage2k21")
+def reviewPage2k21():
+    return render_template("reviewPage2k21.html")
+
+@app.route("/reviewPageHearthstone")
+def reviewPageHearthstone():
+    return render_template("reviewPageHearthstone.html")
+
+@app.route("/reviewPagePokemon")
+def reviewPagePokemon():
+    return render_template("reviewPagePokemon.html")
+
+@app.route("/reviewPageGenshin")
+def reviewPageGenshin():
+    return render_template("reviewPageGenshin.html")
+
+@app.route("/reviewPageSmashBros")
+def reviewPageSmashBros():
+    return render_template("reviewPageSmashBros.html")
+
+@app.route('/joke', methods=['GET', 'POST'])
+def joke():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/joke"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/joke"
+    response = requests.request("GET", url)
+    return render_template("joke.html", joke=response.json())
 
 
-@app.route('/logicgates')
-def logicgates():
-    return render_template("logicgates.html")
+@app.route('/jokes', methods=['GET', 'POST'])
+def jokes():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/jokes"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/jokes"
 
-@app.route('/binary2')
-def binary2():
-    return render_template("binary2.html")
+    response = requests.request("GET", url)
+    return render_template("jokes.html", jokes=response.json())
 
-@app.route('/val', methods=['GET', 'POST'])
-def val():
-    if request.form:
-        bits = request.form.get("bits")
-        if len(bits) != 0:  # input field has content
-            return render_template("val.html", bits=int(bits))
-        # starting and empty input default
-    return render_template("val.html", bits=12)
+@app.route('/covid19', methods=['GET', 'POST'])
+def covid19():
+    url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
+    headers = {
+        'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
+        'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
+    }
 
-@app.route('/controllers')
-def controllers():
-    return render_template("controllers.html")
+    response = requests.request("GET", url, headers=headers)
 
-@app.route('/duelists')
-def duelists():
-    return render_template("duelists.html")
+    """
+    # uncomment this code to test from terminal
+    world = response.json().get('world_total')
+    countries = response.json().get('countries_stat')
+    print(world['total_cases'])
+    for country in countries:
+        print(country["country_name"])
+    """
 
-@app.route('/initiators')
-def initiators():
-    return render_template("initiators.html")
+    return render_template("covid19.html", stats=response.json())
 
-@app.route('/sentinels')
-def sentinels():
-    return render_template("sentinels.html")
+@app.route('/arcadeAPI', methods=['GET', 'POST'])
+def arcadeAPI():
 
-@app.route('/kdr', methods=['GET', 'POST'])
-def kdr():
-    kd_ratio = 0
-    great_player = False
-    urgood = "Let's see if your good"
-    if request.form:
-        kills = request.form.get("kills")
-        deaths = request.form.get("deaths")
-        if deaths is not None :
-            kd_ratio = int(kills)/int(deaths)
-            if kd_ratio >= 1:
-                great_player = True
-            else:
-                great_player = False
-            if great_player == True:
-                urgood=("You're a great player!!")
-            else:
-                urgood=("You suck. Be better")
-        else:
-            print("do nothing")
-    return render_template("kdr.html", kdrval = kd_ratio, gpstatus = great_player, goodplayer=urgood)
+    url = "https://free-to-play-games-database.p.rapidapi.com/api/games"
 
-@app.route('/maps')
-def maps():
-    return render_template("maps.html")
+    querystring = {"sort-by":"alphabetical"}
 
-@app.route('/weapons')
-def weapons():
+    headers = {
+        'x-rapidapi-host': "free-to-play-games-database.p.rapidapi.com",
+        'x-rapidapi-key': "810c60410fmshe6c6bf953125c9ep188957jsn0e6dd57091ec"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    output = json.loads(response.text)
+
+    return render_template("arcadeAPI.html", Games=output)
+
+@app.route('/valorantAPI', methods=['GET', 'POST'])
+def forniteAPI():
     url = "https://valorant-weapons.p.rapidapi.com/Sidearms"
 
     headers = {
         'x-rapidapi-host': "valorant-weapons.p.rapidapi.com",
-        'x-rapidapi-key': "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
+        'x-rapidapi-key': "f843e28f92mshd3de980258688f8p118a28jsn305a11f8326b"
     }
-    response = requests.request("GET", url, headers=headers)
-    output = json.loads(response.text)
-
-    print(response.text)
-    return render_template("weapons.html",x=output)
-
 
     response = requests.request("GET", url, headers=headers)
+
     output = json.loads(response.text)
 
+    return render_template("valorantAPI.html", Sidearms=output)
+
+@app.route('/hearthstoneapi', methods=['GET', 'POST'])
+def hearthstoneapi():
+
+    url = "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards"
+
+    headers = {
+        'x-rapidapi-host': "omgvamp-hearthstone-v1.p.rapidapi.com",
+        'x-rapidapi-key': "9222875d6amsh74b0c5c0e1248fep11845cjsncdbaced252cf"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    output = json.loads(response.text)
+
+    return render_template("hearthstoneapi.html", Info=output)
+
+@app.route("/tictactoe")
+def tictactoe():
+    return render_template("tictactoe.html")
+
+@app.route("/gamequiz")
+def gamequiz():
+    return render_template("gamequiz.html")
+
+@app.route('/pokemongoapi', methods=['GET', 'POST'])
+def pokemongoapi():
+
+
+    url = "https://pokemon-go1.p.rapidapi.com/type_effectiveness.json"
+
+    headers = {
+        'x-rapidapi-host': "pokemon-go1.p.rapidapi.com",
+        'x-rapidapi-key': "e0ad7aa5d6msh9dce61ba4b05901p1b8266jsn87d4e268c462"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
     print(response.text)
-    return render_template("weapons.html",x=output)
+    return render_template("pokemongoapi.html", stats=response.json())
 
-
-@app.route('/slider')
-def slider():
-    return render_template("slider.html")
-
+@app.route('/guessTheNumber', methods=['GET', 'POST'])
+def guessTheNumber():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("number")
+        if len(number) != 0:  # input field has content
+            return render_template("guessTheNumber.html", number=number)
+    # starting and empty input default
+    return render_template("guessTheNumber.html", number="World")
 
 # runs the application on the development server
 if __name__ == "__main__":
