@@ -1,3 +1,0 @@
-# Contributing Guideline
-
-## Issues
