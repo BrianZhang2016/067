@@ -34,8 +34,9 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 
 ### Sprint Overview
 | Week Number | Issue List                                              |
-| ------------- | -------------------------------------------------------------|
-| Sprint 0 (Week 0)   |     https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+is%3Aopen+label%3A%22Week+0+Design+and+Organize%22       |
+| ------------- | -------------------------------------------------------------------------|
+| Sprint 1 (Week 1)   |     [Project Approval](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+is%3Aopen+label%3A%22Week+1+Project+Approval%22)       |
+| Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+is%3Aopen+label%3A%22Week+0+Design+and+Organize%22)       |
 
 
 ### Week 0
