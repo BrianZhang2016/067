@@ -2,6 +2,19 @@
 
 The following is our set of Guidelines for contrubing to our website/project.
 
+## Pull Requests
+
+You can create Pull Requests from [GitHub.com](https://github.com/BrianZhang2016/067/pulls)
+After starting a pull request:
+- A review page with high level overview of the changes between your branch and the repository's main branch will appear 
+- You can add summaries of the proposed changes
+- Review the changes from the commits
+- Add labels, Milestones, and assignees to better organize
+- Mention individual contributors or teams
+
+When pushing commits to a pull request, **NEVER** Force Push.
+- Force Pushing could change the repository history and corrput your pull request 
+- Banched work before the force push may overwrite the commits that the collaborators are basing their work off of
 
 ## Issues
 
