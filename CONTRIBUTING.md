@@ -5,6 +5,7 @@ The following is our set of Guidelines for contrubing to our website/project.
 ## Pull Requests
 
 You can create Pull Requests from [GitHub.com](https://github.com/BrianZhang2016/067/pulls)
+
 After starting a pull request:
 - A review page with high level overview of the changes between your branch and the repository's main branch will appear 
 - You can add summaries of the proposed changes
