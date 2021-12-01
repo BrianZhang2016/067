@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+<style>
+    table, td, th {
+        border: 3px solid var(--white);
+    }
+    td, th {
+        text-align: center;
+    }
+
+</style>
+<div class="container-fluid" style="background-image: url('/static/assets/3586184.jpeg'); height: available; width: 100%; background-repeat: no-repeat; background-attachment: fixed">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center; color: white;">
+            <h1><strong>Pokemon Types</strong></h1>
+        </div>
+
+
+        <!-- Sequence -->
+
+        <div class="col-12" style="text-align: center; color: white;">
+
+            <table style="margin-left: 40%; color: white;">
+                <tr>
+                    <th style="width: 125px; color: white">Type</th>
+                    <th style="width: 125px; color: white">Effectiveness</th>
+                </tr>
+                {% for type in stats %}
+                    <tr>
+                        <td>{{type}}</td>
+                        <td>{{number}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

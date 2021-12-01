@@ -1,0 +1,76 @@
+<!-- Navigation Bar from bootstrap
+This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
+-->
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(185,142,94);">
+        <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+                <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+                <!-- stub is shown using the name of the route -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <!--root menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mini Labs
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/Mini-labs/">Team Video</a>
+                                <a class="dropdown-item" href="/wireframe/">WireFrames</a>
+                                <a class="dropdown-item" href="/signedaddition/">signedaddition</a>
+                                <a class="dropdown-item" href="/rgb">RGB</a>
+                                <a class="dropdown-item" href={{ url_for('binary') }}>Binary Mini Lab</a>
+                                <a class="dropdown-item" href="/stub">Stub</a>
+                                <a class="dropdown-item" href={{ url_for('colorCode') }}>Color Code</a>
+                                <a class="dropdown-item" href={{ url_for('logicGates') }}>Logic Gates</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Greet Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href={{ url_for('zachgreet') }}>Zachary's Greet</a>
+                            <a class="dropdown-item" href="/ethangreet">Ethan's Greet</a>
+                            <a class="dropdown-item" href="/reem">Reem's Greet</a>
+                            <a class="dropdown-item" href={{ url_for('leogreet') }}>Leo's Greet</a>
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Games
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/spaceClick">Space Click</a>
+                            <a class="dropdown-item" href="/guessTheNumber">Guess the Number</a>
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                APIs
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/joke">Joke</a>
+                                <a class="dropdown-item" href="/jokes">Jokes</a>
+                                <a class="dropdown-item" href="/covid19">Covid-19</a>
+                                <a class="dropdown-item" href="/arcadeAPI">arcade API</a>
+                                <a class="dropdown-item" href="/PokemonGo">PokemonGo</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>

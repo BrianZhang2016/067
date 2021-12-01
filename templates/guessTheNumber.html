@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Number</title>
+</head>
+<script>
+    function generateNumber(){
+        var number = Math.floor(Math.random() * 101);
+        localStorage.setItem("number", number);
+    }
+    function guessTheNumber(numberValue){
+        var guess = numberValue;
+        document.getElementById("myText").innerHTML = guess;
+        localStorage.setItem("myText", guess);
+        if (guess > localStorage.getItem("number")) {
+            window.alert("Try a lower number");
+        }else if (guess < localStorage.getItem("number")) {
+            window.alert("Try a higher number");
+        }else {
+            number = Math.floor(Math.random() * 101);
+            window.alert("you won!");
+        }
+    }
+</script>
+    <body>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Guess the Number!</p>
+            <p>Your guess: <span id="myText"></span> </p>
+        </div>
+        <div class="col-12">
+            <form action="/guessTheNumber" method="POST" >
+                <label for="guess">Type a number?</label>
+                <input guess="guess" name="guess" id="guess">
+                <button type="button" onclick="guessTheNumber(document.getElementById('guess').value)">Guess!</button>
+                <button type="button" onclick="generateNumber()">Generate a number!</button>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

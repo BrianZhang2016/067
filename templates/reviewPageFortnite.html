@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Fortnite Review Page" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+<style>
+    table, th, td {
+        border:2px solid black;
+        text-align: center;
+    }
+    #deez{
+        margin-right:8%;
+    }
+</style>
+<body>
+<br>
+
+<div>
+    <img style="margin-left:35%" src="static/assets/fortniteTITLE.png">
+</div>
+<br>
+
+<div class="container" id="deez">
+    <div class="row">
+        <div class="col-sm-4">
+            <img style="width:600px; margin-left:-32.5%" src="static/assets/fortnitePREVIEW.jpg">
+        </div>
+        <div class="col-sm-8">
+            <p style="font-size:28px; margin-left:25%;">
+                Fornite is a battle royale style game where you compete with other players to get first place. This game is very versatile, as you can play with groups of four, three, and two, with many different events going on frequently. At it's core, Fornite is a third person shooter with the added aspect of building, which makes for interesting firefights. Fortnite is a fun game if you want to compete with your friends.
+            </p>
+        </div>
+    </div>
+</div>
+<br>
+
+<div>
+    <table style="margin-right:auto; margin-left:auto; width:65%">
+        <tr>
+            <th style="font-size:30px">Pros</th>
+            <th style="font-size:30px">Cons</th>
+        </tr>
+        <tr style="font-size:20px">
+            <td>Crossplay multiplayer
+                <br>Many different modes and events
+                <br>Free, with a purchasable battle pass that includes different cosmetics</td>
+            <td>Catered towards younger audience, leads to rudeness/cyberbullying</td>
+        </tr>
+    </table>
+</div>
+<br>
+
+<div>
+    <p style="font-size:20px; text-align:center">Available on: PlayStation, Xbox, Switch, Mobile, and PC</p>
+</div>
+<br>
+
+</body>
+{% endblock %}
+</html>

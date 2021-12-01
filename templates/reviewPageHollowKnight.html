@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Hollow Knight Review Page" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+<style>
+    table, th, td {
+        border:2px solid black;
+        text-align: center;
+    }
+    #deez{
+        margin-right:8%;
+    }
+</style>
+<body>
+<br>
+
+<div>
+    <img style="margin-left:35%; width:425px" src="static/assets/hollowknightTITLE.png">
+</div>
+<br>
+
+<div class="container" id="deez">
+    <div class="row">
+        <div class="col-sm-4">
+            <img style="width:600px; margin-left:-32.5%" src="static/assets/hollowknightPREVIEW.jpg">
+        </div>
+        <div class="col-sm-8">
+            <p style="font-size:28px; margin-left:25%;">
+                Hollow Knight is a Metroidvania masterpiece. Play as a small bug adventuring through a long-abandoned kingdom, Hallownest. Gain new abilities and spells while traveling through countless different zones and fight many different bosses. Hollow knight can be challenging at times and offers many different challenges for the more experienced gamers.
+            </p>
+        </div>
+    </div>
+</div>
+<br>
+
+<div>
+    <table style="margin-right:auto; margin-left:auto; width:65%">
+        <tr>
+            <th style="font-size:30px">Pros</th>
+            <th style="font-size:30px">Cons</th>
+        </tr>
+        <tr style="font-size:20px">
+            <td>Amazing story
+                <br>Huge map to explore, many characters to interact with
+                <br>Only $10</td>
+            <td>Can be hard at times for more casual players</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <p style="font-size:20px; text-align:center">Available on: PlayStation, Xbox, Switch, and PC</p>
+</div>
+<br>
+
+</body>
+{% endblock %}
+</html>

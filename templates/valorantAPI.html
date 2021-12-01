@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+<style>
+    table, td, th {
+        border: 1px solid var(--dblue);
+    }
+    td, th {
+        text-align: center;
+    }
+
+</style>
+
+<div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+        <h1><strong>Valorant Sidearms API</strong></h1>
+    </div>
+
+    <!-- Sequence -->
+
+    <div class="col-12" style="text-align: center; ">
+        <table style="margin-left:5%">
+            <tr>
+                <th style="width: 125px;">Name</th>
+                <th style="width: 125px;">Cost</th>
+                <th style="width: 125px;">Fire Type</th>
+                <th style="width: 125px;">Penetration</th>
+                <th style="width: 125px;">Fire Rate</th>
+                <th style="width: 125px;">Run Speed</th>
+                <th style="width: 125px;">Equip Speed</th>
+            </tr>
+
+            <tr>
+                <td>{{Sidearms['weapons'][0]['name']}}
+                <img style="width:375px; height:137px" src="static/assets/classicgun.png"</td>
+                <td>{{Sidearms['weapons'][0]['cost']}} </td>
+                <td>{{Sidearms['weapons'][0]['fire_type']}}</td>
+                <td>{{Sidearms['weapons'][0]['penetration']}}</td>
+                <td>{{Sidearms['weapons'][0]['fire_rate']}}</td>
+                <td>{{Sidearms['weapons'][0]['run_speed']}}</td>
+                <td>{{Sidearms['weapons'][0]['equip_speed']}}</td>
+            </tr>
+            <tr>
+                <td>{{Sidearms['weapons'][1]['name']}}
+                <img style="width:375px; height:137px" src="static/assets/shortygun.png"</td>
+                <td>{{Sidearms['weapons'][1]['cost']}} </td>
+                <td>{{Sidearms['weapons'][1]['fire_type']}}</td>
+                <td>{{Sidearms['weapons'][1]['penetration']}}</td>
+                <td>{{Sidearms['weapons'][1]['fire_rate']}}</td>
+                <td>{{Sidearms['weapons'][1]['run_speed']}}</td>
+                <td>{{Sidearms['weapons'][1]['equip_speed']}}</td>
+            </tr>
+            <tr>
+                <td>{{Sidearms['weapons'][2]['name']}}
+                <img style="width:375px; height:137px" src="static/assets/frenzygun.png"</td>
+                <td>{{Sidearms['weapons'][2]['cost']}} </td>
+                <td>{{Sidearms['weapons'][2]['fire_type']}}</td>
+                <td>{{Sidearms['weapons'][2]['penetration']}}</td>
+                <td>{{Sidearms['weapons'][2]['fire_rate']}}</td>
+                <td>{{Sidearms['weapons'][2]['run_speed']}}</td>
+                <td>{{Sidearms['weapons'][2]['equip_speed']}}</td>
+            </tr>
+            <tr>
+                <td>{{Sidearms['weapons'][3]['name']}}
+                <img style="width:375px; height:137px" src="static/assets/ghostgun.png"</td>
+                <td>{{Sidearms['weapons'][3]['cost']}} </td>
+                <td>{{Sidearms['weapons'][3]['fire_type']}}</td>
+                <td>{{Sidearms['weapons'][3]['penetration']}}</td>
+                <td>{{Sidearms['weapons'][3]['fire_rate']}}</td>
+                <td>{{Sidearms['weapons'][3]['run_speed']}}</td>
+                <td>{{Sidearms['weapons'][3]['equip_speed']}}</td>
+            </tr>
+            <tr>
+                <td>{{Sidearms['weapons'][4]['name']}}
+                <img style="width:375px; height:137px" src="static/assets/sheriffgun.png"</td>
+                <td>{{Sidearms['weapons'][4]['cost']}} </td>
+                <td>{{Sidearms['weapons'][4]['fire_type']}}</td>
+                <td>{{Sidearms['weapons'][4]['penetration']}}</td>
+                <td>{{Sidearms['weapons'][4]['fire_rate']}}</td>
+                <td>{{Sidearms['weapons'][4]['run_speed']}}</td>
+                <td>{{Sidearms['weapons'][4]['equip_speed']}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
