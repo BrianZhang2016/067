@@ -4,14 +4,49 @@ The following is our set of Guidelines for contrubing to our website/project.
 
 ## Pull Requests
 
-You can create Pull Requests from [GitHub.com](https://github.com/BrianZhang2016/067/pulls)
+You can create Pull Requests from our [GitHub.com](https://github.com/BrianZhang2016/067/pulls)
 
-After starting a pull request:
+After initializing a pull request:
 - A review page with high level overview of the changes between your branch and the repository's main branch will appear 
 - You can add summaries of the proposed changes
 - Review the changes from the commits
 - Add labels, Milestones, and assignees to better organize
 - Mention individual contributors or teams
+After creating a pull request:
+You can push commits from your topic branch to your existing pull request
+- Appears in chronological within pull request
+- Changes will be visible in the "Files changed" tab
+Other contributors can:
+- Review proposed changes
+- Add review comments
+- Contribute to pull request discussions
+- Add comments to pull requests
+In "Conversation" tab you can see...
+- Branch's current deployment status
+- Past deployment activity
+After Pull Request is completed:
+- Solo: Merge Pull Request
+- Team: You or a teammate could merge your changes into the main branch
+Linking Pull Request to Issue:
+- Shows fix is in progress
+- Automatically close the issue when someone merges the pull request
+
+### Closing a Pull Request
+1. Go to pull Request below repository name
+2. Select Pull Request you want to close
+3. Scroll to bottom and select "Close Pull Request"
+
+### Deleating a Pull Request
+1. Go to pull request below repository name
+2. Click **closed** to see closed pull requests
+3. Select Pull Request you want to delete
+4. Scroll to bottom and select "Delete Branch"
+
+### Restoring a Pull Request
+1. Go to pull request below repository name
+2. Click **closed** to see closed pull requests
+3. Select Pull Request you want to Restore
+4. Scroll to bottom and select "Restore Branch"
 
 When pushing commits to a pull request, **NEVER** Force Push.
 - Force Pushing could change the repository history and corrput your pull request 
