@@ -46,6 +46,17 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Leo | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Alleosunn) |
 | Brian | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3ABrianZhang2016) |
 
+10 key technicals:
+*website deployment
+*movie/show api
+*rated r toggle thing
+*dark mode
+*movie search feature
+*movie quiz
+*sorting movie/show by rating
+*movie review/comments page
+*
+
 ### Week 0
 | Roles   | About the Roles | 
 | ------------- | -------------------------------------------------------------|
