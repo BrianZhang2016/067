@@ -51,15 +51,15 @@ def leogreet():
     return render_template("leohtml.html", name="World")
 
 
-@app.route('/reem', methods=['GET', 'POST'])
-def reem():
+@app.route('/stanley', methods=['GET', 'POST'])
+def stanley():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("reem.html", name=name)
+            return render_template("stanley.html", name=name)
     # starting and empty input default
-    return render_template("reem.html", name="World")
+    return render_template("stanley.html", name="World")
 
 @app.route('/Mini-labs/')
 def video():
