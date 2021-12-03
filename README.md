@@ -46,6 +46,7 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Stanley | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3AStanleyy03840) |
 | Leo | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Alleosunn) |
 | Brian | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3ABrianZhang2016) |
+| Crossover | [Ticket](https://github.com/BrianZhang2016/067/issues/12) |
 
 
 ### Week 0
