@@ -18,7 +18,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         :root{
             --white: whitesmoke;
             --black: black;
-            --grey: grey;
+            --turqoise: #037a76;
         }
 
         html, body{
@@ -28,7 +28,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--grey);
+            background-color: var(--turqoise);
             color: var(--white);
             font-size: 1vw;
         }
@@ -110,7 +110,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-<div class="container-fluid" style="background-image: url('/static/assets/3586184.jpeg'); height: 92.2%; width: 100%;">
     <div class="row justify-content-end" style="padding: 2%;">
         <div class="col-2" style="text-align: right;">
             {% block info %}
@@ -128,7 +127,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
             <div class="col-8" >
-                <h1>Team Peanutbutter</h1>
+                <h1>Team 067</h1>
             </div>
 
         </div>
