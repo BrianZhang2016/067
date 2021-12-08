@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <title>Leo's About Me + Greet</title>
+
+    <div class="col-12">
+        <p>Hello, {{name}}!</p>
+    </div>
+
+
+    <div class="col-12">
+        <form action="/briangreet" id="greet" method="POST" >
+            <label for="name">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+
+    <label class="tog">
+        <input type="checkbox" checked>
+        <span>Mask</span>
+    </label>
+    </body>
+    <style>
+
+        label.tog > input {
+
+        }
+
+        label.tog > input + span {
+            text-indent: -9000px; /* Make text Accessible but not visible */
+            display: inline-block;
+            width: 400px;
+            height: 400px;
+            background: center / contain no-repeat url("/static/assets/brianmaskoff.png");
+        }
+
+        label.tog > input:checked + span {
+            background-image: url("/static/assets/brianmaskon.png");
+        }
+    </style>
+
+    </html>
+
+</div>
+</body>
+</html>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
