@@ -30,15 +30,15 @@ def zachgreet():
     # starting and empty input default
     return render_template("zachary_greet.html", name="World")
 
-@app.route('/ethangreet', methods=['GET', 'POST'])
-def ethangreet():
+@app.route('/briangreet', methods=['GET', 'POST'])
+def briangreet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("ethangreet.html", name=name)
+            return render_template("briangreet.html", name=name)
     # starting and empty input default
-    return render_template("ethangreet.html", name="World")
+    return render_template("briangreet.html", name="World")
 
 @app.route('/leo', methods=['GET', 'POST'])
 def leo():
