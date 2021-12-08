@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <title>Leo's About Me + Greet</title>
+
+        <div class="col-12">
+            <p>Hello, {{name}}!</p>
+        </div>
+
+
+        <div class="col-12">
+            <form action="/stanley" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
+
+
+        <div class="col-12">
+            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+        </div>
+
+
+    </div>
+
+    <div>
+        <img src="/static/img/Reem%20Picture.jpg">
+        <p style="color: #000064"> hi im leo :).
+    </div>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
