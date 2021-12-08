@@ -2,13 +2,13 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
+
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <title>Leo's About Me + Greet</title>
 
         <div class="col-12">
             <p>Hello, {{name}}!</p>
         </div>
-
 
         <div class="col-12">
             <form action="/leo" id="greet" method="POST" >
@@ -17,21 +17,38 @@
                 <input type="submit" value="Greetings!">
             </form>
         </div>
+        <label class="tog">
+            <input type="checkbox" checked>
+            <span>Mask</span>
+        </label>
 
-        <h2 style="font-family:'Courier New'">#1: Becoming (By Michelle Obama)</h2>
-        </button>
-        <img src="/static/assets/leomaskon.png" onclick="this.src='/static/assets/leomaskoff.png'">
+        <style>
+            label.tog > input {
+
+            }
+
+            label.tog > input + span {
+                text-indent: -9000px; /* Make text Accessible but not visible */
+                display: inline-block;
+                width: 1436px;
+                height: 834px;
+                background: center / contain no-repeat url("/static/assets/leomaskoff.png");
+            }
+
+            label.tog > input:checked + span {
+                background-image: url("/static/assets/leomaskon.png");
+            }
+        </style>
+
 
         <div style="position:relative; left:80px"
-        <p style="font-family:'Courier New'"> Autobiography written by Michelle Obama on events and lifestyles from her early life all the way up until the book was published. She shares childhood stories, as well as different events
-            that she went through on her journey to becoming the First Lady of the United States.</p>
     </div>
+
 </body>
 </html>
 
 
 {% endblock %}
-
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
