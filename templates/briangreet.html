@@ -2,20 +2,20 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+<div class="center-block" style="margin: 2% 5% 5%; font-size: 20px; text-align:left; font-family: gilroy,serif;">
     <title>Brian's About Me + Greet</title>
 
     <div class="col-12">
-        <p>Hello, {{name}}!</p>
-    </div>
-
-
-    <div class="col-12">
         <form action="/briangreet" id="greet" method="POST" >
-            <label for="name">Type a greeting name?</label>
+            <label for="name">What's your name?</label>
             <input name="name" id="name">
             <input type="submit" value="Greetings!">
         </form>
+    </div>
+
+    <div class="col-12">
+        <p>Hello {{name}}, My name's Brian!
+            Click my face to change how I look.</p>
     </div>
 
     <label class="tog">
