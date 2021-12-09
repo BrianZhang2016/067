@@ -22,6 +22,17 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <ul class="navbar-nav mr-auto">
                         <!--root menu -->
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #ed1b76" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Greet Pages
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href={{ url_for('zachgreet') }}>Zachary's Greet</a>
+                                <a class="dropdown-item" href="/briangreet">Brian's Greet</a>
+                                <a class="dropdown-item" href="/stanley">Stanley's Greet</a>
+                                <a class="dropdown-item" href="/leo">Leo's Greet</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ed1b76">
                                 Mini Labs
                             </a>
@@ -35,17 +46,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                                 <a class="dropdown-item" href={{ url_for('colorCode') }}>Color Code</a>
                                 <a class="dropdown-item" href={{ url_for('logicGates') }}>Logic Gates</a>
                             </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #ed1b76" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Greet Pages
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href={{ url_for('zachgreet') }}>Zachary's Greet</a>
-                            <a class="dropdown-item" href="/briangreet">Brian's Greet</a>
-                            <a class="dropdown-item" href="/stanley">Stanley's Greet</a>
-                            <a class="dropdown-item" href="/leo">Leo's Greet</a>
-                        </div>
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #ed1b76" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
