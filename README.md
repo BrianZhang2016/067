@@ -48,11 +48,11 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+0+Design+and+Organize%22)       |
 
 ### Week 2
-| This Week's Ticket | [Issues](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+2+Home+Pages%22) |
-| ------------- | -------------------------------------------------------------|
 
-Get the Navbar working and test it out with stub
-Created greet pages and try to customize the website
+Created About Me Pages w/ changing images
+
+Notes on 2.3 & 2.4
+
 Update README.md
 
 ### Week 1
