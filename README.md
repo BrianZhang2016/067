@@ -49,11 +49,8 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 
 ### Week 2
 
-Created About Me Pages w/ changing images
-
-Notes on 2.3 & 2.4
-
-Update README.md
+[Issue](https://github.com/BrianZhang2016/067/issues/5)  | [Review Ticket](https://github.com/BrianZhang2016/067/issues/34) |
+| ------------- | -------------------------------------------------------------------------|
 
 ### Week 1
 | Members | Ticket |
