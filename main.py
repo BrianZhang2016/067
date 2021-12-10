@@ -40,26 +40,20 @@ def briangreet():
     # starting and empty input default
     return render_template("briangreet.html", name="World")
 
-@app.route('/leo', methods=['GET', 'POST'])
-def leo():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("leo.html", name=name)
-    # starting and empty input default
-    return render_template("leo.html", name="World")
-
-
 @app.route('/stanley', methods=['GET', 'POST'])
 def stanley():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("stanley.html", name=name)
-    # starting and empty input default
-    return render_template("stanley.html", name="World")
+    url = "https://valorant-weapons.p.rapidapi.com/Sidearms"
+
+    headers = {
+        'x-rapidapi-host': "valorant-weapons.p.rapidapi.com",
+        'x-rapidapi-key': "f843e28f92mshd3de980258688f8p118a28jsn305a11f8326b"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    output = json.loads(response.text)
+
+    return render_template("stanley.html", Sidearms=output)
 
 @app.route('/Mini-labs/')
 def video():
@@ -217,6 +211,23 @@ def arcadeAPI():
     output = json.loads(response.text)
 
     return render_template("arcadeAPI.html", Games=output)
+
+@app.route('/leo', methods=['GET', 'POST'])
+def leo():
+    url = "https://weatherapi-com.p.rapidapi.com/current.json"
+
+    querystring = {"q":"32.7157,-117.1611"}
+
+    headers = {
+        'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
+        'x-rapidapi-key': "e0ad7aa5d6msh9dce61ba4b05901p1b8266jsn87d4e268c462"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    output = json.loads(response.text)
+
+    return render_template("leo.html", Weather=output)
 
 @app.route('/valorantAPI', methods=['GET', 'POST'])
 def forniteAPI():
