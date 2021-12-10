@@ -1,33 +1,52 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zach's About Me + Greet</title>
-</head>
-<body>
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-    <div class="col-12">
-        <p>Hello, {{name}}!</p>
-    </div>
-    <div class="col-12">
-        <form action="/zachgreet" id="greet" method="POST" >
-            <label for="name">Type a greeting name?</label>
-            <input name="name" id="name">
-            <input type="submit" value="Greetings!">
-        </form>
-    </div>
-    <div class="col-12">
-        <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-    </div>
-</div>
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
 
-<div>
-    <img src="/static/assets/Zach%20Photo.jpg">
-    <p style="color: #000064"> Hi, I'm Zach. I'm 15 years old, and I speak two languages.
-</div>
+{% block body %}
 
-</body>
-</html>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <title>Zach's About Me + Greet</title>
+
+        <div class="col-12">
+            <p>Hello, {{name}}!</p>
+        </div>
+
+        <div class="col-12">
+            <form action="/zachgreet" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
+        <label class="tog">
+            <input type="checkbox" checked>
+            <span>Mask</span>
+        </label>
+
+
+        <style>
+            label.tog > input {
+
+            }
+
+            label.tog > input + span {
+                text-indent: -9000px; /* Make text Accessible but not visible */
+                display: inline-block;
+                width: 800px;
+                height: 500px;
+                background: center / contain no-repeat url("static/assets/zachmaskoff.png");
+            }
+
+            label.tog > input:checked + span {
+                background-image: url("static/assets/zachmaskon.jpg");
+            }
+        </style>
+
+
+        <div style="position:relative; left:80px"
+    </div>
+
+    </body>
+    </html>
+
+
+{% endblock %}
