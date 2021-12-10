@@ -51,15 +51,15 @@ def leo():
     return render_template("leo.html", name="World")
 
 
-@app.route('/stanley', methods=['GET', 'POST'])
-def stanley():
+@app.route('/stanleyy', methods=['GET', 'POST'])
+def stanleyy():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("stanley.html", name=name)
+            return render_template("stanleyy.html", name=name)
     # starting and empty input default
-    return render_template("stanley.html", name="World")
+    return render_template("stanleyy.html", name="World")
 
 @app.route('/Mini-labs/')
 def video():
