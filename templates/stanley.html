@@ -2,37 +2,112 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-  <title>Stanley's About Me + Greet</title>
 
-  <div class="col-12">
-    <p>Hello, {{name}}!</p>
-  </div>
+    <div style="background-color: purple">
+        <div class="center-block" style="margin: 0% 0% 0% 0%; text-align:center; font-family: gilroy,sans-serif;">
+
+            <div class="col-12" style="font-size: 30px;">
+                <p>Hi, my name is Stanley! Click on the picture to see me without a mask (I am on the right).</p>
+            </div>
+
+            <label class="tog">
+                <input type="checkbox" checked>
+                <span>Mask</span>
+            </label>
+            <style>
+                label.tog > input {
+                }
+                label.tog > input + span {
+                    text-indent: -9000px; /* Make text Accessible but not visible */
+                    display: inline-block;
+                    width: 800px;
+                    height: 500px;
+                    background: center / contain no-repeat url("/static/assets/leomaskoff.png");
+                }
+                label.tog > input:checked + span {
+                    background-image: url("/static/assets/leomaskon.png");
+                }
+            </style>
+
+            <div class="col-12" style="text-align: center; font-size: 15px;">
+                <h2><strong>Curious about Valorant sidearm stats? Check it out below!</strong></h2>
+                <table style="margin-left:5%">
+                    <tr>
+                        <th style="width: 125px;">Name</th>
+                        <th style="width: 125px;">Cost</th>
+                        <th style="width: 125px;">Fire Type</th>
+                        <th style="width: 125px;">Penetration</th>
+                        <th style="width: 125px;">Fire Rate</th>
+                        <th style="width: 125px;">Run Speed</th>
+                        <th style="width: 125px;">Equip Speed</th>
+                    </tr>
+
+                    <tr>
+                        <td>{{Sidearms['weapons'][0]['name']}}
+                            <img style="width:375px; height:137px" src="static/assets/classicgun.png"</td>
+                        <td>{{Sidearms['weapons'][0]['cost']}} </td>
+                        <td>{{Sidearms['weapons'][0]['fire_type']}}</td>
+                        <td>{{Sidearms['weapons'][0]['penetration']}}</td>
+                        <td>{{Sidearms['weapons'][0]['fire_rate']}}</td>
+                        <td>{{Sidearms['weapons'][0]['run_speed']}}</td>
+                        <td>{{Sidearms['weapons'][0]['equip_speed']}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Sidearms['weapons'][1]['name']}}
+                            <img style="width:375px; height:137px" src="static/assets/shortygun.png"</td>
+                        <td>{{Sidearms['weapons'][1]['cost']}} </td>
+                        <td>{{Sidearms['weapons'][1]['fire_type']}}</td>
+                        <td>{{Sidearms['weapons'][1]['penetration']}}</td>
+                        <td>{{Sidearms['weapons'][1]['fire_rate']}}</td>
+                        <td>{{Sidearms['weapons'][1]['run_speed']}}</td>
+                        <td>{{Sidearms['weapons'][1]['equip_speed']}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Sidearms['weapons'][2]['name']}}
+                            <img style="width:375px; height:137px" src="static/assets/frenzygun.png"</td>
+                        <td>{{Sidearms['weapons'][2]['cost']}} </td>
+                        <td>{{Sidearms['weapons'][2]['fire_type']}}</td>
+                        <td>{{Sidearms['weapons'][2]['penetration']}}</td>
+                        <td>{{Sidearms['weapons'][2]['fire_rate']}}</td>
+                        <td>{{Sidearms['weapons'][2]['run_speed']}}</td>
+                        <td>{{Sidearms['weapons'][2]['equip_speed']}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Sidearms['weapons'][3]['name']}}
+                            <img style="width:375px; height:137px" src="static/assets/ghostgun.png"</td>
+                        <td>{{Sidearms['weapons'][3]['cost']}} </td>
+                        <td>{{Sidearms['weapons'][3]['fire_type']}}</td>
+                        <td>{{Sidearms['weapons'][3]['penetration']}}</td>
+                        <td>{{Sidearms['weapons'][3]['fire_rate']}}</td>
+                        <td>{{Sidearms['weapons'][3]['run_speed']}}</td>
+                        <td>{{Sidearms['weapons'][3]['equip_speed']}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Sidearms['weapons'][4]['name']}}
+                            <img style="width:375px; height:137px" src="static/assets/sheriffgun.png"</td>
+                        <td>{{Sidearms['weapons'][4]['cost']}} </td>
+                        <td>{{Sidearms['weapons'][4]['fire_type']}}</td>
+                        <td>{{Sidearms['weapons'][4]['penetration']}}</td>
+                        <td>{{Sidearms['weapons'][4]['fire_rate']}}</td>
+                        <td>{{Sidearms['weapons'][4]['run_speed']}}</td>
+                        <td>{{Sidearms['weapons'][4]['equip_speed']}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="col-sm" style="font-size:40px;">
+                    <a href="https://docs.google.com/document/d/1RjCabf4uYDJ0jTDEKXNHbvnHPhlOszNcla_7WAyO1Cg/edit" target="_blank">Journal</a>
+                </div>
+
+                <div class="col-sm" style="font-size:40px;">
+                    <a href="https://github.com/BrianZhang2016/067/wiki/Create-Task-Plan" target="_blank">Create Task Plan</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </html>
 
 
-  <div class="col-12">
-    <form action="/stanley" id="greet" method="POST" >
-      <label for="name">Type a greeting name?</label>
-      <input name="name" id="name">
-      <input type="submit" value="Greetings!">
-    </form>
-  </div>
-
-
-  <div class="col-12">
-    <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-  </div>
-
-
-</div>
-
-<div>
-  <img src="/static/img/Reem%20Picture.jpg">
-  <p style="color: #000064"> Hi, I'm Reem. I'm 15 years old and taller than Leo.
-</div>
-
-{% endblock %}
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
 {% endblock %}
