@@ -6,7 +6,7 @@
 ## Purpose of README
 #### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
 
-## Table of Contents
+## Table Of Contents
 | Week Number |
 | ------------- | 
 | [Week 3](#Week-3)    | 
@@ -54,12 +54,14 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | ------------- | -------------------------------------------------------------|
 | Technical Officer | [Video](https://github.com/BrianZhang2016/067/issues?q=]is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Azachye111) | 
 | Scrum Master | [Video](https://github.com/BrianZhang2016/067/issues?q=]is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Azachye111) | 
+[Back](#Table-Of-Contents) 
 
 ### Week 2
 
 | Issue  | Ticket |
 | ------------- | -------------------------------------------------------------------------|
 | [About Me Page](https://github.com/BrianZhang2016/067/issues/5)  | [Review Ticket](https://github.com/BrianZhang2016/067/issues/34) |
+[Back](#Table-Of-Contents) 
 
 ### Week 1
 | Members | Ticket |
@@ -69,7 +71,7 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Leo | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Alleosunn) |
 | Brian | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3ABrianZhang2016) |
 | Crossover | [Ticket](https://github.com/BrianZhang2016/067/issues/12) |
-
+[Back](#Table-Of-Contents) 
 
 ### Week 0
 | Roles   | About the Roles | 
@@ -79,4 +81,4 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Primary Designer | Primary Designer and Layout manager.  Organize Jinja2 Enabled Templates, ensure usage of Bootstrap (minimize CSS customization per page).  Establish plan for overrides on each of the User Pages. |
 | Deployment Manager | Deploy Web site.  Establish policy and frequency for updates.  Ensure site is not broken and always alive for reviews. |
 | Technical Officer | Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester.  Also, facilitates learning of Technical Concepts within Scrum Team. |
-
+[Back](#Table-Of-Contents) 
