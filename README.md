@@ -59,7 +59,7 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 
 | Issue  | Ticket |
 | ------------- | -------------------------------------------------------------------------|
-| [About Pe Page](https://github.com/BrianZhang2016/067/issues/5)  | [Review Ticket](https://github.com/BrianZhang2016/067/issues/34) |
+| [About Me Page](https://github.com/BrianZhang2016/067/issues/5)  | [Review Ticket](https://github.com/BrianZhang2016/067/issues/34) |
 
 ### Week 1
 | Members | Ticket |
