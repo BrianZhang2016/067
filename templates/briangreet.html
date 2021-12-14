@@ -4,7 +4,25 @@
 {% block body %}
 <div class="center-block" style="margin: 2% 5% 5%; font-size: 20px; text-align:left; font-family: gilroy,serif;">
     <title>Brian's About Me + Greet</title>
+<script>
+    async function getnum() {
+        const response = await fetch("https://roll-dice1.p.rapidapi.com/rollDice", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "roll-dice1.p.rapidapi.com",
+            "x-rapidapi-key": "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
+        }
+    })
+        console.log(response);
+        const numarr = await response.text();
+        console.log(numarr);
+        document.getElementById("dice").innerHTML = numarr;
 
+        };
+getnum()
+</script>
+
+    <body>
     <div class="col-12">
         <form action="/briangreet" id="greet" method="POST" >
             <label for="name">What's your name?</label>
@@ -17,12 +35,16 @@
         <p>Hello {{name}}, My name's Brian!
             Click my face to change how I look.</p>
     </div>
+    <!-- Still working on metadata-->
+    <div id="dice"></div>
+
+    <br>
 
     <label class="tog">
         <input type="checkbox" checked>
         <span>Mask</span>
     </label>
-    </body>
+
     <style>
 
         label.tog > input {
@@ -70,7 +92,7 @@
     </style>
     <div class="row">
         <div class="col-sm" style="font-size:40px;">
-        <a href="https://docs.google.com/document/d/13bldcvcK0Tj5fnoD3ZBt-I9W8JwUMvsLGsQxQLcwXgM/edit" target="_blank">Journal</a>
+        <a href="https://docs.google.com/document/d/1jcKg-ePg4ypQtN7OBywRdvh7gPhAji-Yp8DZ7MjgxEw/edit?usp=sharing" target="_blank">Journal</a>
         </div>
 
     <div class="col-sm" style="font-size:40px;">
@@ -81,7 +103,15 @@
 </body>
 </html>
     <br>
-
+    </body>
+<style>
+    html,body {
+        background: url('/static/assets/Red Background.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+            }
 
 {% endblock %}
 
