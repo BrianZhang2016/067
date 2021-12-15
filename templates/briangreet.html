@@ -21,6 +21,7 @@
         };
 getnum()
 </script>
+
     <body>
     <div class="col-12">
         <form action="/briangreet" id="greet" method="POST" >
@@ -34,8 +35,10 @@ getnum()
         <p>Hello {{name}}, My name's Brian!
             Click my face to change how I look.</p>
     </div>
-    <br>
+    <!-- Still working on metadata-->
     <div id="dice"></div>
+
+    <br>
 
     <label class="tog">
         <input type="checkbox" checked>
@@ -59,7 +62,6 @@ getnum()
         label.tog > input:checked + span {
             background-image: url("/static/assets/brianmaskon.png");
         }
-    </style>
 
     <style>
         /* Change link colors */
@@ -89,7 +91,7 @@ getnum()
     </style>
     <div class="row">
         <div class="col-sm" style="font-size:40px;">
-        <a href="https://docs.google.com/document/d/13bldcvcK0Tj5fnoD3ZBt-I9W8JwUMvsLGsQxQLcwXgM/edit" target="_blank">Journal</a>
+        <a href="https://docs.google.com/document/d/1jcKg-ePg4ypQtN7OBywRdvh7gPhAji-Yp8DZ7MjgxEw/edit?usp=sharing" target="_blank">Journal</a>
         </div>
 
     <div class="col-sm" style="font-size:40px;">
@@ -100,9 +102,7 @@ getnum()
 </body>
 </html>
     <br>
-
-<script
-
+    </body>
 <style>
     html,body {
         background: url('/static/assets/Red Background.png') no-repeat center center fixed;
@@ -112,9 +112,8 @@ getnum()
             background-size: cover;
             }
 
-
 {% endblock %}
-    </body>
+
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
