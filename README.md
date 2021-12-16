@@ -50,10 +50,10 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+0+Design+and+Organize%22)       |
 
 ### Week 3
-| Members | Videos |
+| Video | [Here](https://youtu.be/w-4idyFU6Pg) | 
 | ------------- | -------------------------------------------------------------|
-| Technical Officer | [Video](https://github.com/BrianZhang2016/067/issues?q=]is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Azachye111) | 
-| Scrum Master | [Video](https://github.com/BrianZhang2016/067/issues?q=]is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Azachye111) | 
+
+
 
 [Back](#Table-Of-Contents) 
 
