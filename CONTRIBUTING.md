@@ -4,8 +4,27 @@ The following is our set of Guidelines for contrubing to our website/project.
 
 ## Pull Requests
 
-You can create Pull Requests from our [GitHub.com](https://github.com/BrianZhang2016/067/pulls)
+You can create Pull Requests from our [GitHub.com](https://github.com/BrianZhang2016/067/pulls) But we mainly perfer you createing a branch on IntelliJ IDEA first then pushing it into our cloud AKA [Github](https://github.com/BrianZhang2016/067) 
 
+### Creating a Branch on IntelliJ
+First click the bottom right "Main" and click "New Branch"
+<img width="1010" alt="Screen Shot 2021-12-16 at 09 52 15" src="https://user-images.githubusercontent.com/89234480/146423354-6fc566cf-1c5d-4811-8654-34d5f99630d3.png">
+Title the branch and click create then start making changes to the project and commit, **PULL**, and lastly push it.
+
+Then head on over to our [Github](https://github.com/BrianZhang2016/067) where you can see the recent branch with the title **OR** the commit comment. 
+<img width="836" alt="Screen Shot 2021-12-16 at 13 08 56" src="https://user-images.githubusercontent.com/89234480/146449337-8f74e900-ef35-4914-92f8-910efe0f3e38.png">
+Select Compare  Pull Request
+
+**MAKE SURE THAT YOU SELECT THE BASE REPOSITORY AS "BrianZhang2016/067" AND NOT "Reinhardtlotter/flask_portfolio"**
+
+Then click "Create Pull Request"
+
+<img width="1096" alt="Screen Shot 2021-12-16 at 13 10 24" src="https://user-images.githubusercontent.com/89234480/146449561-b0d41c51-6de9-4ca3-bee2-52ddae1e7f36.png">
+
+Lastly, Click "Merge Pull Request" and "Confirm Merge" then "Delete Branch"
+
+
+### Pull Request for Github:
 After initializing a pull request:
 - A review page with high level overview of the changes between your branch and the repository's main branch will appear 
 - You can add summaries of the proposed changes
