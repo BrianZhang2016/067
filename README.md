@@ -50,9 +50,9 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+0+Design+and+Organize%22)       |
 
 ### Week 3
-| Members | Videos |
-| ------------- | -------------------------------------------------------------|
 | Video | [Here](https://youtu.be/w-4idyFU6Pg) | 
+| ------------- | -------------------------------------------------------------|
+
 
 
 [Back](#Table-Of-Contents) 
