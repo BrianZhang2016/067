@@ -303,6 +303,10 @@ def page_not_found(e):
     # note that we set the 404 status explicitly
     return render_template('404.html'), 404
 
+@app.route("/arcade2")
+def arcade2():
+    return render_template("arcade2.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8080)
