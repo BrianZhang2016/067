@@ -59,6 +59,10 @@ def stanley():
 def video():
     return render_template("Mini-labs.html")
 
+@app.route('/moviequiz/')
+def moviequiz():
+    return render_template("moviequiz.html")
+
 @app.route('/signedaddition/')
 def signedaddition():
     return render_template("signedaddition.html")
