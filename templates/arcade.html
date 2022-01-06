@@ -50,7 +50,7 @@
         }
 
         .hoverclick1{
-            background: url('../static/assets/RESIZE2minecraft-preview.png') no-repeat;
+            background: url('../static/assets/spiderman.png') no-repeat;
             cursor:pointer;
             width:500px;
             height:500px;
@@ -58,7 +58,7 @@
         }
 
         .hoverclick2{
-            background: url('../static/assets/RESIZE2hollowknight-review.jpg') no-repeat;
+            background: url('../static/assets/darkknight.png') no-repeat;
             cursor:pointer;
             width:500px;
             height:500px;
@@ -66,7 +66,7 @@
         }
 
         .hoverclick3{
-            background: url('../static/assets/RESIZE2valorant-preview.jpg') no-repeat;
+            background: url('../static/assets/jurassicpark.png') no-repeat;
             cursor:pointer;
             width:500px;
             height:500px;
@@ -74,7 +74,7 @@
         }
 
         .hoverclick4{
-            background: url('../static/assets/RESIZE2rocketleague-preview.jpg') no-repeat;
+            background: url('../static/assets/starwarsep6.png') no-repeat;
             cursor:pointer;
             width:500px;
             height:500px;
@@ -154,7 +154,7 @@
             box-shadow: 0 20px 40px rgba(255, 255, 255, 0.7);
 
         }
-    </style>
+        <img src="../../../Downloads/spider_man_no_way_home_india_1638191040.webp" height="1400" width="1000"/></style>
 
     <script>
         let i = 1;
@@ -193,18 +193,18 @@
     <div>
         <h1 style="font-size:75px; text-align:center; font-family: gilroy,serif;">Movies</h1>
         <h2 style="font-size:35px; text-align:center; font-family: gilroy,serif;">Review popular movies and discover new favorites!</h2>
-        <button style="margin-left:39%" onclick="mature()" >Toggle R Rated Movies</button>
-        <button ><a href="arcadeAPI">View the top movies!<a/></button>
+        <button style="margin-left:39%" onclick="mature()" >Toggle PG-13/R Rated Movies</button>
+        <button ><a href="">View the top movies!<a/></button>
     </div>
 
     <div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <input type="button" class="fa hoverclick1" onclick="location.href = 'reviewPageMinecraft';" style= "margin-top:10%">
+                    <input type="button" id="mature1" class="fa hoverclick1" onclick="location.href = 'reviewSpiderman';" style= "margin-top:10%">
                 </div>
                 <div class="col-sm-5">
-                    <input type="button" class="fa hoverclick2" onclick="location.href = 'reviewPageHollowKnight';" style= "margin-top:8%; margin-left:60%">
+                    <input type="button" id="mature2" class="fa hoverclick2" onclick="location.href = 'reviewDarkknight';" style= "margin-top:8%; margin-left:60%">
                 </div>
             </div>
         </div>
@@ -212,54 +212,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <input type="button" id="mature1" class="fa hoverclick3" onclick="location.href = 'reviewPageValorant';" style= "margin-top:10%">
+                    <input type="button" id="mature3" class="fa hoverclick3" onclick="location.href = 'reviewJurassicpark';" style= "margin-top:10%">
                 </div>
                 <div class="col-sm-5">
-                    <input type="button" class="fa hoverclick4" onclick="location.href = 'reviewPageRocketLeague';" style= "margin-top:8%; margin-left:60%">
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <input type="button" class="fa hoverclick5" onclick="location.href = 'reviewPageAmongUs';" style= "margin-top:10%">
-                </div>
-                <div class="col-sm-5">
-                    <input type="button" id="mature2" class="fa hoverclick6" onclick="location.href = 'reviewPageFortnite';" style= "margin-top:8%; margin-left:60%">
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <input type="button" id="mature3" class="fa hoverclick7" onclick="location.href = 'reviewPageSeaOfThieves';" style= "margin-top:10%">
-                </div>
-                <div class="col-sm-5">
-                    <input type="button" class="fa hoverclick8" onclick="location.href = 'reviewPage2k21';" style= "margin-top:8%; margin-left:60%">
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <input type="button" class="fa hoverclick9" onclick="location.href = 'reviewPageHearthstone';" style= "margin-top:10%">
-                </div>
-                <div class="col-sm-5">
-                    <input type="button" class="fa hoverclick10" onclick="location.href = 'reviewPagePokemon';" style= "margin-top:8%; margin-left:60%">
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <input type="button" class="fa hoverclick11" onclick="location.href = 'reviewPageGenshin';" style= "margin-top:10%">
-                </div>
-                <div class="col-sm-5">
-                    <input type="button" class="fa hoverclick12" onclick="location.href = 'reviewPageSmashBros';" style= "margin-top:8%; margin-left:60%">
+                    <input type="button" id="mature4" class="fa hoverclick4" onclick="location.href = 'reviewStarwarsep6';" style= "margin-top:8%; margin-left:60%">
                 </div>
             </div>
         </div>

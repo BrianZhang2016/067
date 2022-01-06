@@ -79,6 +79,22 @@ def binary():
 def about_us():
     return render_template("about_us.html")
 
+@app.route('/reviewSpiderman/')
+def reviewSpiderman():
+    return render_template("reviewSpiderman.html")
+
+@app.route('/reviewJurassicpark/')
+def reviewJurassicpark():
+    return render_template("reviewJurassicpark.html")
+
+@app.route('/reviewStarwarsep6/')
+def reviewStarwarsep6():
+    return render_template("reviewStarwarsep6.html")
+
+@app.route('/reviewDarkknight/')
+def reviewDarkknight():
+    return render_template("reviewDarkknight.html")
+
 @app.route('/wireframe/')
 def wireframe():
     return render_template("wireframe.html")
