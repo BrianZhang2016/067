@@ -311,6 +311,10 @@ def page_not_found(e):
 def arcade2():
     return render_template("arcade2.html")
 
+@app.route("/movieapi")
+def movieapi():
+    return render_template("movieapi.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8080)

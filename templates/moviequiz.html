@@ -2,12 +2,168 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-<div class="center-block" style="margin: 2% 5% 5%; font-size: 30px; text-align:left; font-family: gilroy,serif;">
-    <p>Movie Quiz</p>
-</div>
-<body>
-<div class="col-12">
-<p> Hello and Welcome to Movie Quiz!</p>
-</body>
-</div>
+<h1 class="center-block" style=" text-align:center; font-family: 'Comic Sans MS';"">Movie Quiz!</h1>
+    <h2 style=> Welcome to our Movie Quiz! </h2>
+<h3 style="color: red; padding-left: 40px">Warning, some questions may contain spoilers</h3>
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<style>
+    body{
+        font-size: 15px;
+        font-family: "Comic Sans MS";
+        color: #333;
+    }
+    .question{
+        font-weight: 600;
+    }
+    .answers {
+        margin-bottom: 20px;
+    }
+    .answers label{
+        display: block;
+    }
+    #submit{
+        font-family: sans-serif;
+        font-size: 20px;
+        background-color: #279;
+        color: #fff;
+        border: 0px;
+        border-radius: 3px;
+        padding: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    #submit:hover{
+        background-color: #38a;
+    }
+</style>
+
+<script>
+    (function(){
+        function buildQuiz(){
+            const output = [];
+
+            myQuestions.forEach(
+                (currentQuestion, questionNumber) => {
+
+                    const answers = [];
+
+                    for(letter in currentQuestion.answers){
+
+                        answers.push(
+                            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+                        );
+                    }
+
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+                    );
+                }
+            );
+
+            quizContainer.innerHTML = output.join('');
+        }
+
+        function showResults(){
+
+            const answerContainers = quizContainer.querySelectorAll('.answers');
+
+            let numCorrect = 0;
+
+            // for each question...
+            myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+                // find selected answer
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                // if answer is correct
+                if(userAnswer === currentQuestion.correctAnswer){
+                    // add to the number of correct answers
+                    numCorrect++;
+
+                    // color the answers green
+                    answerContainers[questionNumber].style.color = 'darkgreen';
+                }
+                // if answer is wrong or blank
+                else{
+                    // color the answers red
+                    answerContainers[questionNumber].style.color = '#ed1b76';
+                }
+            });
+
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        }
+
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+        const myQuestions = [
+            {
+                question: "In The Matrix, does Neo take the blue pill or the red pill?",
+                answers: {
+                    a: "Blue Pill",
+                    b: "Red Pill"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "What shield is Captain America's Shield made out of?",
+                answers: {
+                    a: "Vibranium",
+                    b: "Adamantium",
+                    c: "Kryptonite",
+                    d: "Carbonite"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "When did the movie Elf come out?",
+                answers: {
+                    a: "2003",
+                    b: "2000",
+                    c: "2006",
+                    d: "2001"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "Where was The Lord of the Rings movies filmed?",
+                answers: {
+                    a: "Finland",
+                    b: "Ireland",
+                    c: "Iceland",
+                    d: "New Zealand"
+                },
+                correctAnswer: "d"
+            },
+            {
+                question: "What color is Freddy Krueger's striped sweater?",
+                answers: {
+                    a: "Brown and Red",
+                    b: "Black and Green",
+                    c: "Red and Green",
+                    d: "Blue and Brown"
+                },
+                correctAnswer: "c"
+            }
+        ];
+
+        // Kick things off
+        buildQuiz();
+
+        // Event listeners
+        submitButton.addEventListener('click', showResults);
+    })();
+</script>
+
 {% endblock %}

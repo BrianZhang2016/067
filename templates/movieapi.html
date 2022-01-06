@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Api</title>
+</head>
+{% block body %}
+<body>
+
+<h2>Movie Api</h2>
+<p>Genre 1:</p>
+<div id="deaths"></div>
+<p>Genre 2:</p>
+<div id="confirmed"></div>
+<p>Genre 3:</p>
+<div id="recovered"></div>
+<script>
+    async function getcovid() {
+        const response = await fetch("data-imdb1.p.rapidapi.com", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "data-imdb1.p.rapidapi.com",
+                "x-rapidapi-key": "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
+            }
+        })
+        console.log(response);
+        const covidarr = await response.json();
+        console.log(covidarr);
+        const covidstats = covidarr;
+        document.getElementById("confirmed").textContent = covidstats[0]["genre"];
+        document.getElementById("deaths").textContent = covidstats[1]["genre"];
+        document.getElementById("recovered").textContent = covidstats[2]["genre"];
+    }
+    getcovid();
+</script>
+</body>
+{% endblock %}
+</html>
