@@ -4,6 +4,9 @@ from flask import Blueprint, render_template
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import json
 import requests
+from __init__ import app
+
+
 
 # create a Flask instance
 app = Flask(__name__)
@@ -326,6 +329,10 @@ def page_not_found(e):
 @app.route("/arcade2")
 def arcade2():
     return render_template("arcade2.html")
+
+@app.route("/movieapi")
+def movieapi():
+    return render_template("movieapi.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
