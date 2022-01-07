@@ -235,23 +235,6 @@ def arcadeAPI():
 
     return render_template("arcadeAPI.html", Games=output)
 
-@app.route('/leo', methods=['GET', 'POST'])
-def leo():
-    url = "https://weatherapi-com.p.rapidapi.com/current.json"
-
-    querystring = {"q":"32.7157,-117.1611"}
-
-    headers = {
-        'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
-        'x-rapidapi-key': "e0ad7aa5d6msh9dce61ba4b05901p1b8266jsn87d4e268c462"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-
-    output = json.loads(response.text)
-
-    return render_template("leo.html", Weather=output)
-
 @app.route('/valorantAPI', methods=['GET', 'POST'])
 def forniteAPI():
     url = "https://valorant-weapons.p.rapidapi.com/Sidearms"
@@ -332,7 +315,38 @@ def arcade2():
 
 @app.route("/movieapi")
 def movieapi():
-    return render_template("movieapi.html")
+
+    url = "https://ott-details.p.rapidapi.com/getnew"
+
+    querystring = {"region":"US","page":"1"}
+
+    headers = {
+        'x-rapidapi-host': "ott-details.p.rapidapi.com",
+        'x-rapidapi-key': "e0ad7aa5d6msh9dce61ba4b05901p1b8266jsn87d4e268c462"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    output = json.loads(response.text)
+
+    return render_template("movieapi.html", Movie=output)
+
+@app.route('/leo', methods=['GET', 'POST'])
+def leo():
+    url = "https://weatherapi-com.p.rapidapi.com/current.json"
+
+    querystring = {"q":"32.7157,-117.1611"}
+
+    headers = {
+        'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
+        'x-rapidapi-key': "e0ad7aa5d6msh9dce61ba4b05901p1b8266jsn87d4e268c462"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    output = json.loads(response.text)
+
+    return render_template("leo.html", Weather=output)
 
 # runs the application on the development server
 if __name__ == "__main__":
