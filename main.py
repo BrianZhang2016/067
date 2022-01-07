@@ -98,6 +98,22 @@ def reviewStarwarsep6():
 def reviewDarkknight():
     return render_template("reviewDarkknight.html")
 
+@app.route('/reviewTheoffice/')
+def reviewTheoffice():
+    return render_template("reviewTheoffice.html")
+
+@app.route('/reviewBreakingbad/')
+def reviewBreakingbad():
+    return render_template("reviewBreakingbad.html")
+
+@app.route('/reviewSquidgame/')
+def reviewSquidgame():
+    return render_template("reviewSquidgame.html")
+
+@app.route('/reviewMandalorian/')
+def reviewMandalorian():
+    return render_template("reviewMandalorian.html")
+
 @app.route('/wireframe/')
 def wireframe():
     return render_template("wireframe.html")
