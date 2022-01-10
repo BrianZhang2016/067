@@ -35,10 +35,34 @@ getnum()
         <p>Hello {{name}}, My name's Brian!
             Click my face to change how I look.</p>
     </div>
-    <!-- Still working on metadata-->
 
-    <div id="dice"></div>
-
+</div>
+<h2 style="padding-left: 50px">COVID STATISTICS</h2>
+<p style="padding-left: 25px">TOTAL DEATHS:</p>
+<div id="deaths"></div>
+<p style="padding-left: 25px">CONFIRMED CASES:</p>
+<div id="confirmed"></div>
+<p style="padding-left: 25px">RECOVERED CASES:</p>
+<div id="recovered"></div>
+<script>
+    async function getcovid() {
+        const response = await fetch("https://covid-19-data.p.rapidapi.com/totals?format=json", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
+                "x-rapidapi-key": "e6bd77677amsh90e6e0d99503c97p115f93jsn608379db2bc4"
+            }
+        })
+        console.log(response);
+        const covidarr = await response.json();
+        console.log(covidarr);
+        const covidstats = covidarr[0];
+        document.getElementById("confirmed").textContent = covidstats["confirmed"];
+        document.getElementById("deaths").textContent = covidstats["deaths"];
+        document.getElementById("recovered").textContent = covidstats["recovered"];
+    }
+    getcovid();
+</script>
     <br>
 
     <label class="tog">

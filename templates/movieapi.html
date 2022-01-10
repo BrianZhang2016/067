@@ -1,39 +1,132 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Movie Api</title>
-</head>
-{% block body %}
-<body>
 
-<h2>Movie Api</h2>
-<p>Genre 1:</p>
-<div id="deaths"></div>
-<p>Genre 2:</p>
-<div id="confirmed"></div>
-<p>Genre 3:</p>
-<div id="recovered"></div>
-<script>
-    async function getcovid() {
-        const response = await fetch("data-imdb1.p.rapidapi.com", {
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "data-imdb1.p.rapidapi.com",
-                "x-rapidapi-key": "8369759d57msh8fa2295ad3d60ccp1b48eajsn37d90ec37799"
-            }
-        })
-        console.log(response);
-        const covidarr = await response.json();
-        console.log(covidarr);
-        const covidstats = covidarr;
-        document.getElementById("confirmed").textContent = covidstats[0]["genre"];
-        document.getElementById("deaths").textContent = covidstats[1]["genre"];
-        document.getElementById("recovered").textContent = covidstats[2]["genre"];
-    }
-    getcovid();
-</script>
-</body>
+{% block body %}
+
+    <div style="background-color: sandybrown">
+        <div class="center-block" style="margin: 0% 0% 0% 0%; text-align:center; font-family: gilroy,sans-serif;">
+
+            <div class="col-12" style="font-size: 30px;">
+                <p>Looking for a new movie to watch? Check some out below!</p>
+            </div>
+
+
+            <div class="col-12" style="text-align: center; font-size: 30px;">
+                <table class="col-12" style="text-align: center;">
+                    <tr>
+                        <th style="width: 125px; color: white;">Title</th>
+                        <th style="width: 125px; color: white;">Runtime</th>
+                        <th style="width: 125px; color: white;">Release Date</th>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][0]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][0]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][0]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][1]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][1]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][1]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][2]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][2]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][2]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][3]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][3]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][3]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][4]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][4]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][4]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][5]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][5]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][5]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][6]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][6]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][6]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][7]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][7]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][7]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][8]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][8]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][8]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][9]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][9]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][9]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][10]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][10]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][10]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][11]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][11]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][11]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][12]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][12]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][12]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][13]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][13]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][13]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][14]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][14]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][14]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][15]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][15]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][15]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][16]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][16]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][16]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][17]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][17]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][17]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][18]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][18]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][18]['released']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 125px; color: white;">{{Movie['results'][19]['title']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][19]['runtime']}}</td>
+                        <td style="width: 125px; color: white;">{{Movie['results'][19]['released']}}</td>
+                    </tr>
+
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+    </html>
+
+
 {% endblock %}
-</html>
