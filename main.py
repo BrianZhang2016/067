@@ -290,6 +290,14 @@ def tictactoe():
 def gamequiz():
     return render_template("gamequiz.html")
 
+@app.route("/crud")
+def crud():
+    return render_template("crud.html")
+
+@app.route("/search")
+def search():
+    return render_template("search.html")
+
 @app.route('/pokemongoapi', methods=['GET', 'POST'])
 def pokemongoapi():
 
