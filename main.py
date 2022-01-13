@@ -8,7 +8,6 @@ from __init__ import app
 from crudfiles.app_crud import app_crud
 
 
-
 # create a Flask instance
 #app = Flask(__name__)
 app.register_blueprint(app_crud)
