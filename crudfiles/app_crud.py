@@ -30,6 +30,10 @@ def users_all():
     return [peep.read() for peep in Users.query.all()]
 
 
+class Users:
+    pass
+
+
 def users_ilike(term):
     """filter Users table by term into JSON list """
     term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%

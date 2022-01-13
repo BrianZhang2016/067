@@ -5,12 +5,13 @@ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-
 import json
 import requests
 from __init__ import app
+from crudfiles.app_crud import app_crud
 
 
 
 # create a Flask instance
-app = Flask(__name__)
-
+#app = Flask(__name__)
+app.register_blueprint(app_crud)
 
 # connects default URL to render index.html
 @app.route('/')
@@ -292,7 +293,7 @@ def gamequiz():
 
 @app.route("/crud")
 def crud():
-    return render_template("crud.html")
+    return render_template("crudfiles.crud.html")
 
 @app.route("/search")
 def search():
