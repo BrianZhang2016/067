@@ -112,3 +112,6 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Technical Officer | Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester.  Also, facilitates learning of Technical Concepts within Scrum Team. |
 
 [Back](#Table-Of-Contents) 
+
+
+![Screen Shot 2022-01-20 at 12 11 59 PM](https://user-images.githubusercontent.com/37047405/150419295-b6045482-06b7-4283-b7be-2a62772b8480.png)
