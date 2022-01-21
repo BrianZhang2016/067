@@ -3,7 +3,7 @@ from flask import Blueprint, render_template
 from flask_restful import Api, Resource
 import requests
 
-from sql import *
+from crud2.sql import *
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 
@@ -11,7 +11,7 @@ app_crud_api = Blueprint('crud_api', __name__,
                          url_prefix='/crud_api',
                          template_folder='templates/crud/',
                          static_folder='static',
-                         static_url_path='crud/static')
+                         static_url_path='static')
 
 # API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
 api = Api(app_crud_api)

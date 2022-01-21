@@ -1,8 +1,8 @@
-""" database dependencies to support Users db examples """
 from sqlalchemy.exc import IntegrityError
 from __init__ import db
 
 # Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along
+# Define variable to define type of database (sqlite), and name and location of myDB.db
 
 
 # Define the Users table within the model
@@ -10,6 +10,68 @@ from __init__ import db
 # -- a.) db.Model is like an inner layer of the onion in ORM
 # -- b.) Users represents data we want to store, something that is built on db.Model
 # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
+
+class Subjects(db.Model):
+    # define the Users schema
+    classID = db.Column(db.Integer, primary_key=True)
+    className = db.Column(db.String(255), unique=False, nullable=False)
+    teacher = db.Column(db.String(255), unique=True, nullable=False)
+    link = db.Column(db.String(255), unique=False, nullable=False)
+    studentsEnrolled = db.Column(db.String(255), unique=False, nullable=False)
+
+    # constructor of a User object, initializes of instance variables within object
+    def __init__(self, className, teacher, link, studentsEnrolled):
+        self.className = className
+        self.teacher = teacher
+        self.link = link
+        self.studentsEnrolled = studentsEnrolled
+
+    # CRUD create/add a new record to the table
+    # returns self or None on error
+    def create(self):
+        try:
+            # creates a person object from Users(db.Model) class, passes initializers
+            db.session.add(self)  # add prepares to persist person object to Users table
+            db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit
+            return self
+        except IntegrityError:
+            db.session.remove()
+            return None
+
+    # CRUD read converts self to dictionary
+    # returns dictionary
+    def read(self):
+        return {
+            "classID": self.classID,
+            "className": self.className,
+            "teacher": self.teacher,
+            "link": self.link,
+            "studentsEnrolled": self.studentsEnrolled
+        }
+
+    # CRUD update: updates users name, password, phone
+    # returns self
+    def update(self, className, teacher="", link="", studentsEnrolled=""):
+        """only updates values with length"""
+        if len(className) > 0:
+            self.className = className
+        if len(teacher) > 0:
+            self.teacher = teacher
+        if len(link) > 0:
+            self.link = link
+        if len(studentsEnrolled) > 0:
+            self.studentsEnrolled = studentsEnrolled
+        db.session.commit()
+        return self
+
+    # CRUD delete: remove self
+    # None
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+        return None
+
+
 class Users(db.Model):
     # define the Users schema
     userID = db.Column(db.Integer, primary_key=True)
@@ -45,8 +107,7 @@ class Users(db.Model):
             "name": self.name,
             "email": self.email,
             "password": self.password,
-            "phone": self.phone,
-            "query": "by_alc"  # This is for fun, a little watermark
+            "phone": self.phone
         }
 
     # CRUD update: updates users name, password, phone
@@ -71,6 +132,35 @@ class Users(db.Model):
 
 
 """Database Creation and Testing section"""
+
+
+def subject_model_tester():
+    print("--------------------------")
+    print("Seed Data for Table: Subjects")
+    print("--------------------------")
+    db.create_all()
+    """Tester data for table"""
+    s1 = Subjects(className='Math', teacher='someone', link='something', studentsEnrolled="Sahil")
+    s2 = Subjects(className='Computer Science', teacher='Mrs. Naidu', link='something', studentsEnrolled="Sahil")
+    s3 = Subjects(className='Physics', teacher='Mr. Liao', link='something', studentsEnrolled="Sahil")
+    table = [s1, s2, s3]
+    for row in table:
+        try:
+            db.session.add(row)
+            db.session.commit()
+        except IntegrityError:
+            db.session.remove()
+            print(f"Records exist, duplicate teacher, or error: {row.teacher}")
+
+
+def subject_model_printer():
+    print("------------")
+    print("Table: users with SQL query")
+    print("------------")
+    result = db.session.execute('select * from subjects')
+    print(result.keys())
+    for row in result:
+        print(row)
 
 
 def model_tester():
@@ -108,5 +198,7 @@ def model_printer():
 
 
 if __name__ == "__main__":
+    subject_model_tester()  # builds model of Subjects
+    subject_model_printer()
     model_tester()  # builds model of Users
     model_printer()

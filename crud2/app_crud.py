@@ -1,14 +1,14 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 
-from sql import *
+from crud2.sql import *
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
-app_crud = Blueprint('crud', __name__,
-                     url_prefix='/crud',
+app_crud = Blueprint('usercrud', __name__,
+                     url_prefix='/usercrud',
                      template_folder='templates/crud/',
                      static_folder='static',
-                     static_url_path='crud/static')
+                     static_url_path='static')
 
 """ Application control for CRUD is main focus of this File, key features:
     1.) User table queries

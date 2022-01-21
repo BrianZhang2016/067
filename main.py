@@ -4,12 +4,13 @@ from flask import render_template
 import json
 import requests
 from __init__ import app
-from app_crud import app_crud
-
+from crud2.crud_app import app_crud1
+from crud2.crud_app import app_crud1
+from crud2.app_crud_api import app_crud_api
 
 # create a Flask instance
 #app = Flask(__name__)
-app.register_blueprint(app_crud)
+app.register_blueprint(app_crud1)
 
 
 # connects default URL to render index.html
@@ -357,6 +358,8 @@ def movieapi():
 
 @app.route('/leo', methods=['GET', 'POST'])
 def leo():
+
+
     url = "https://weatherapi-com.p.rapidapi.com/current.json"
 
     querystring = {"q":"32.7157,-117.1611"}
