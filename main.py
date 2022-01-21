@@ -299,6 +299,16 @@ def crud():
 def search():
     return render_template("search.html")
 
+@app.route("/fibonacci")
+def fibonacci():
+    return render_template("fibonacci.html")
+
+@app.route("/palindrome")
+def palindrome():
+    return render_template("palindrome.html")
+
+
+
 @app.route('/pokemongoapi', methods=['GET', 'POST'])
 def pokemongoapi():
 
