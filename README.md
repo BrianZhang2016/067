@@ -9,6 +9,7 @@
 ## Table Of Contents
 | Week Number |
 | ------------- | 
+| [Mid Term&Vocab](#Mid-Term)    | 
 | [Week 5](#Week-5)    | 
 | [Week 4](#Week-4)    | 
 | [Week 3](#Week-3)    | 
@@ -52,6 +53,13 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Sprint 1, 2 (Week 2)   |     [Home Pages](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+2+Home+Pages%22)        |
 | Sprint 1, 2 (Week 1)   |     [Project Approval](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22)       |
 | Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+0+Design+and+Organize%22)       |
+
+### Mid Term
+| Member | Wiki's | 
+| ------------- | -------------------------------------------------------------|
+| Leo&Stanley | [Wiki](https://github.com/BrianZhang2016/067/wiki/Vocab-Competency-Brian&Zach)  | 
+| Brian&Zach |  [Wiki](https://github.com/BrianZhang2016/067/wiki/Vocab-Competency-Leo&Stanley) | 
+
 
 
 ### Week 5
