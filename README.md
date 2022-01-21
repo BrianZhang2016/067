@@ -61,11 +61,13 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Brian&Zach |  [Wiki](https://github.com/BrianZhang2016/067/wiki/Vocab-Competency-Leo&Stanley) | 
 
 
+[Back](#Table-Of-Contents) 
 
 ### Week 5
 | Member | Tangables | 
 | ------------- | -------------------------------------------------------------|
-|  |   | 
+| Brian |  [Issue](https://github.com/BrianZhang2016/067/issues/46) | 
+| Leo |  [Issue](https://github.com/BrianZhang2016/067/issues/47) | 
 
 
 
