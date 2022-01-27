@@ -139,6 +139,10 @@ def logicGates():
 def spaceClick():
     return render_template("spaceClick.html")
 
+@app.route("/github_readme")
+def github_readme():
+    return render_template("github_readme.html")
+
 @app.route("/arcade")
 def arcade():
     return render_template("arcade.html")
