@@ -9,6 +9,32 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         nav.navbar {
             position: relative;
         }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::before {
+            position: absolute;
+            border-bottom: 2px solid transparent;
+            content: "";
+            left: 0%;
+            right: 0;
+            bottom: 0;
+        }
+        .nav-link:hover::before {
+            animation-name: border-move;
+            animation-duration: 0.8s;
+            border-bottom: 2px solid #ed1c76;
+        }
+        @keyframes border-move {
+            0% {
+                right: 100%;
+                left: 100%;
+            }
+            100% {
+                right: 0%;
+                left: 0%;
+            }
+        }
         #form-group {
             position: absolute;
             padding: 1.5em;
