@@ -15,6 +15,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             background-color: var(--white);
             width: 25%;
             top: 50px;
+            z-index: 5
         }
         #form-group input, #form-group button {
             width: 100%;
@@ -141,6 +142,21 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 }
 
             })
+            const search = document.getElementById('googleSearch');
+            const google = 'https://www.google.com/search?q=site%3A+';
+            const site = 'https://nighthawkcodingsociety.com';
+            function submitted(event) {
+              if (event.key === 'Enter') {
+                 event.preventDefault();
+                 const url = google
+                             + site
+                             + '+'
+                             + search.value;
+                             const win = window.open(url, '_blank');
+                             win.focus();
+              }
+            }
+            search.addEventListener('keypress', submitted);
             function showSearch() {
                 if (document.getElementById("form-group").style.display == "none") {
                     document.getElementById("form-group").style.display = "block"
