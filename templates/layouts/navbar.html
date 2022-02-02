@@ -5,6 +5,24 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <script>
 
     </script>
+    <style>
+        nav.navbar {
+            position: relative;
+        }
+        #form-group {
+            position: absolute;
+            padding: 1em;
+            background-color: var(--white);
+            width: 30%;
+            top: 50px;
+        }
+        #form-group input, #form-group button {
+            width: 100%
+        }
+        #result {
+            color: var(--turqoise)
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +44,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                                 Greet Pages
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href={{ url_for('zachgreet') }}>Zachary's Greet</a>
+                                <a class="dropdown-item" href="/zachgreet">Zachary's Greet</a>
                                 <a class="dropdown-item" href="/briangreet">Brian's Greet</a>
                                 <a class="dropdown-item" href="/stanley">Stanley's Greet</a>
                                 <a class="dropdown-item" href="/leo">Leo's Greet</a>
@@ -80,11 +98,77 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
                             </div>
                         </li>
+                        <div style="display: flex; align-items: center" onclick="showSearch()">
+                            <i style="color: black" class="fas fa-search"></i>
+                        </div>
+                        <div id="form-group" class="form-group" style="display: block">
+                            <input type="text" class="form-control" id="term" placeholder="enter search term" autocomplete="off">
+                            <button onclick="search_data()">Search Data</button>
+                            <div class="container">
+                                <div class="column" id="result">
+                                </div>
+                            </div>
+
+                        </div>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
+    <script>
+            function showSearch() {
+                if (document.getElementById("form-group").style.display == "none") {
+                    document.getElementById("form-group").style.display = "block"
+                } else {
+                    document.getElementById("form-group").style.display = "none"
+                }
+            }
+            function search_data() {
+                // fetch standard requires data set to a name-value pair
+                const term = document.getElementById("term");
+                const body = {
+                    term: term.value
+                };
+
+                // fetch call with header options
+                fetch('/crud/search/term/', {
+                    method: "POST",
+                    credentials: "include",
+                    body: JSON.stringify(body),
+                    cache: "no-cache",
+                    headers: new Headers({
+                        "content-type": "application/json"
+                    })
+                })
+                // async then replies with response header
+                .then(function (response) {
+                    // prepare HTML search result container for new output
+                    const resultContainer = document.getElementById("result");
+                    // clean up from previous search
+                    while (resultContainer.firstChild) {
+                        resultContainer.removeChild(resultContainer.firstChild);
+                    }
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                        const errorMsg = 'Database response error: ' + response.status;
+                        console.log(errorMsg);
+                        const div = document.createElement("div");
+                        div.innerHTML = errorMsg;
+                        resultContainer.appendChild(div);
+                        return;
+                    }
+                    // response contains valid result
+                    response.json().then(function(data) {
+                        // loop through JSON and build HTML output
+                        for (let i = 0; i < data.length; i++) {
+                            const div = document.createElement("div");
+                            div.innerHTML = 'Class Name:' + data[i].className + ', Teacher:' + data[i].teacher + ', Link:' + data[i].link;
+                            resultContainer.appendChild(div);
+                        }
+                    })
+                })
+            }
+    </script>
 </body>
 
 
