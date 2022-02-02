@@ -11,16 +11,25 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         }
         #form-group {
             position: absolute;
-            padding: 1em;
+            padding: 1.5em;
             background-color: var(--white);
-            width: 30%;
+            width: 25%;
             top: 50px;
         }
         #form-group input, #form-group button {
-            width: 100%
+            width: 100%;
         }
         #result {
             color: var(--turqoise)
+        }
+        .searchTable {
+            table-layout: fixed;
+            width: 100%;
+        }
+        .searchTable td, .searchTable th {
+            border: 2px solid var(--turqoise);
+            padding: 0.5em;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -101,12 +110,21 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <div style="display: flex; align-items: center" onclick="showSearch()">
                             <i style="color: black" class="fas fa-search"></i>
                         </div>
-                        <div id="form-group" class="form-group" style="display: block">
-                            <input type="text" class="form-control" id="term" placeholder="enter search term" autocomplete="off">
-                            <button onclick="search_data()">Search Data</button>
-                            <div class="container">
-                                <div class="column" id="result">
-                                </div>
+                        <div id="form-group" class="form-group" style="display: none">
+                            <input type="text" style="margin-bottom: 15px;" class="form-control" id="term" placeholder="enter search term" autocomplete="off">
+                            <button onclick="search_data()" id="searchButton" style="margin-bottom: 15px">Search Data</button>
+                            <div class="resultsContainer" style="color: var(--turqoise)">
+<!--                                 <div class="column" id="result"> -->
+<!--                                 </div> -->
+                                <table class="searchTable">
+                                <tr>
+                                    <th> Class </th>
+                                    <th> Teacher </th>
+                                    <th> Students </th>
+                                </tr>
+                                </table>
+                                <table id="result" class="searchTable">
+                                </table>
                             </div>
 
                         </div>
@@ -116,6 +134,13 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         </div>
     </nav>
     <script>
+            var input = document.getElementById("term");
+            input.addEventListener("keyup", function(event){
+                if (event.keyCode == 13) {
+                    document.getElementById("searchButton").click();
+                }
+
+            })
             function showSearch() {
                 if (document.getElementById("form-group").style.display == "none") {
                     document.getElementById("form-group").style.display = "block"
@@ -161,9 +186,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     response.json().then(function(data) {
                         // loop through JSON and build HTML output
                         for (let i = 0; i < data.length; i++) {
-                            const div = document.createElement("div");
-                            div.innerHTML = 'Class Name:' + data[i].className + ', Teacher:' + data[i].teacher + ', Link:' + data[i].link;
-                            resultContainer.appendChild(div);
+                            const row = document.createElement("tr");
+                            row.innerHTML = '<td>' + data[i].className + '</td> <td>' + data[i].teacher + '</td> <td>' + data[i].studentsEnrolled + "</td>";
+                            resultContainer.appendChild(row);
                         }
                     })
                 })
