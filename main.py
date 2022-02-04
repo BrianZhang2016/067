@@ -8,7 +8,8 @@ from crud2.crud_app import app_crud1
 from crud2.crud_app import app_crud1
 from aboutus import aboutus
 from crud2.app_crud_api import app_crud_api
-
+import pandas as pd
+import os
 # create a Flask instance
 #app = Flask(__name__)
 app.register_blueprint(app_crud1)
@@ -314,6 +315,10 @@ def page_not_found(e):
 def arcade2():
     return render_template("arcade2.html")
 
+@app.route("/recommendations")
+def recommendations():
+    return render_template("recommendations.html")
+
 @app.route("/movieapi")
 def movieapi():
 
@@ -331,6 +336,7 @@ def movieapi():
     output = json.loads(response.text)
 
     return render_template("movieapi.html", Movie=output)
+
 
 
 # runs the application on the development server

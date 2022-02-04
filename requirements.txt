@@ -13,3 +13,4 @@ furl
 starter
 algorithm
 webapi
+pandas
