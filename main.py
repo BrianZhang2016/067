@@ -317,6 +317,8 @@ def arcade2():
 
 @app.route("/recommendations")
 def recommendations():
+    # movies = pd.read_csv("/movieData/movies.csv")
+    # print(movies.head())
     return render_template("recommendations.html")
 
 @app.route("/movieapi")
