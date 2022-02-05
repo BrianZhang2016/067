@@ -9,9 +9,12 @@ from crud2.crud_app import app_crud1
 from aboutus import aboutus
 from crud2.app_crud_api import app_crud_api
 import pandas as pd
+import math
 import os
 # create a Flask instance
 #app = Flask(__name__)
+from recommendations import recommendation
+
 app.register_blueprint(app_crud1)
 app.register_blueprint(aboutus)
 
@@ -317,9 +320,8 @@ def arcade2():
 
 @app.route("/recommendations")
 def recommendations():
-    # movies = pd.read_csv("/movieData/movies.csv")
-    # print(movies.head())
-    return render_template("recommendations.html")
+    output = recommendation()
+    return render_template("recommendations.html",output=output)
 
 @app.route("/movieapi")
 def movieapi():

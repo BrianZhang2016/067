@@ -14,3 +14,4 @@ starter
 algorithm
 webapi
 pandas
+scipy
