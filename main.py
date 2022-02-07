@@ -8,12 +8,11 @@ from crud2.crud_app import app_crud1
 from crud2.crud_app import app_crud1
 from aboutus import aboutus
 from crud2.app_crud_api import app_crud_api
-import pandas as pd
 import math
 import os
 # create a Flask instance
 #app = Flask(__name__)
-from recommendations import recommendation
+# from recommendations import recommendation
 
 app.register_blueprint(app_crud1)
 app.register_blueprint(aboutus)
@@ -334,10 +333,10 @@ def page_not_found(e):
 def arcade2():
     return render_template("arcade2.html")
 
-@app.route("/recommendations")
-def recommendations():
-    output = recommendation()
-    return render_template("recommendations.html",output=output)
+# @app.route("/recommendations")
+# def recommendations():
+#     output = recommendation()
+#     return render_template("recommendations.html",output=output)
 
 @app.route("/movieapi")
 def movieapi():

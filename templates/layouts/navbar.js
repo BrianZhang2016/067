@@ -27,9 +27,7 @@ function darkFunction() {
 
 // Clock Control
 // clockElement global element set for convenience
-let clockElement = document.getElementById('clock')
-// Execute clock function on load
-clock();
+let clockElement = document.getElementById('clock');
 // Clock update executes on each interval set by timer
 function clock() {
     let date = new Date();
@@ -38,4 +36,3 @@ function clock() {
 // Clock refresh timer, a reoccurring event
 setInterval(clock, 1000);
 // End Clock Control
-
