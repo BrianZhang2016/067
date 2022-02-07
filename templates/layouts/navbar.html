@@ -58,6 +58,12 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             padding: 0.5em;
             word-wrap: break-word;
         }
+        .toggle-container {
+            margin-left: 800px;
+            margin-top: 10px;
+            text-align: right;
+            color: black;
+        }
     </style>
 </head>
 
@@ -155,12 +161,38 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             </div>
 
                         </div>
+                        <div class="toggle-container">
+                            <input type="checkbox" id="darkSwitch" name="theme" /><label for="switch"> Dark Mode</label>
+                        </div>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
     <script>
+     const darkSwitch=document.getElementById("darkSwitch");
+// establishes the initial state of darkSwitch on page load
+if(darkSwitch) {
+    // obtains the value of darkSwitch from localStorage
+    const darkSwitchSelected =
+        localStorage.getItem("darkSwitch") !== null &&
+        localStorage.getItem("darkSwitch") === "dark";
+    // sets the value of darkSwitch.checked to the global darkSwitch
+    darkSwitch.checked=darkSwitchSelected;
+    // if dark-mode, toggle the switch to dark-mode position
+    if (darkSwitchSelected)
+        document.body.classList.toggle("dark-mode");
+}
+// executes on each "dark mode" UI toggle
+function darkFunction() {
+    // toggles between off (standard CSS) and dark-mode (.dark-mode CSS)
+    document.body.classList.toggle("dark-mode");
+    // localStorage is used to manage darkSwitch status
+    darkSwitch.checked
+        ? localStorage.setItem("darkSwitch","dark")
+        : localStorage.removeItem("darkSwitch");
+}
+
             var input = document.getElementById("term");
             input.addEventListener("keyup", function(event){
                 if (event.keyCode == 13) {
