@@ -40,92 +40,6 @@
     }
 </style>
 
-{#    <script>#}
-{#        // store questions#}
-{#        const myQuestions = [#}
-{#            {#}
-{#                question: "In The Matrix, does Neo take the blue pill or the red pill?",#}
-{#                answers: {#}
-{#                    a: "Blue Pill",#}
-{#                    b: "Red Pill"#}
-{#                },#}
-{#                correctAnswer: "b"#}
-{#            },#}
-{#            {#}
-{#                question: "What shield is Captain America's Shield made out of?",#}
-{#                answers: {#}
-{#                    a: "Vibranium",#}
-{#                    b: "Adamantium",#}
-{#                    c: "Kryptonite",#}
-{#                    d: "Carbonite"#}
-{#                },#}
-{#                correctAnswer: "a"#}
-{#            },#}
-{#            {#}
-{#                question: "When did the movie Elf come out?",#}
-{#                answers: {#}
-{#                    a: "2003",#}
-{#                    b: "2000",#}
-{#                    c: "2006",#}
-{#                    d: "2001"#}
-{#                },#}
-{#                correctAnswer: "a"#}
-{#            },#}
-{#            {#}
-{#                question: "Where was The Lord of the Rings movies filmed?",#}
-{#                answers: {#}
-{#                    a: "Finland",#}
-{#                    b: "Ireland",#}
-{#                    c: "Iceland",#}
-{#                    d: "New Zealand"#}
-{#                },#}
-{#                correctAnswer: "d"#}
-{#            },#}
-{#            {#}
-{#                question: "What color is Freddy Krueger's striped sweater?",#}
-{#                answers: {#}
-{#                    a: "Brown and Red",#}
-{#                    b: "Black and Green",#}
-{#                    c: "Red and Green",#}
-{#                    d: "Blue and Brown"#}
-{#                },#}
-{#                correctAnswer: "c"#}
-{#            },#}
-{#            {#}
-{#                question: "What is Spiderman's real name?",#}
-{#                answers: {#}
-{#                    a: "Clark Kent",#}
-{#                    b: "Peter Parker",#}
-{#                    c: "Gal Gadot",#}
-{#                    d: "Tony Stark"#}
-{#                },#}
-{#                correctAnswer: "b"#}
-{#            }#}
-{#        ];#}
-{##}
-{#        // generate random numbers that will be used for the order#}
-{#        indexes = [];#}
-{#        indexes[0] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        indexes[1] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        indexes[2] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        indexes[3] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        indexes[4] = Math.round(Math.random() * (myQuestions.length-1))#}
-{##}
-{##}
-{#        while ((indexes[0] === indexes[1]) | (indexes[0] === indexes[2]) | (indexes[0] === indexes[3]) || (indexes[0] === indexes[4])) {#}
-{#            indexes[0] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        }#}
-{#        while ((indexes[1] === indexes[2]) | (indexes[1] === indexes[3]) || (indexes[1] === indexes[4])) {#}
-{#            indexes[1] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        }#}
-{#        while ((indexes[2] === indexes[3]) || (indexes[2] === indexes[4])) {#}
-{#            indexes[2] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        }#}
-{#        while (indexes[3] === indexes[4]) {#}
-{#            indexes[3] = Math.round(Math.random() * (myQuestions.length-1))#}
-{#        }#}
-{#        console.log(indexes)#}
-{#    </script>#}
 
 <script>
     (function(){
@@ -227,7 +141,7 @@
                 correctAnswer: "b"
             },
             {
-                question: "What shield is Captain America's Shield made out of?",
+                question: "What material is Captain America's Shield made out of?",
                 answers: {
                     a: "Vibranium",
                     b: "Adamantium",
@@ -275,6 +189,46 @@
                     d: "Tony Stark"
                 },
                 correctAnswer: "b"
+            },
+            {
+                question: "What is the highest grossing movie of all time?",
+                answers: {
+                    a: "The Avatar",
+                    b: "Avengers: Endgame",
+                    c: "The Flowers of War",
+                    d: "Encanto",
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "What was the first feature length animated movie?",
+                answers: {
+                    a: "Dumbo",
+                    b: "Snow White and the Seven Dwarves",
+                    c: "Zootopia",
+                    d: "Star Wars",
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "Who played Dumbledore in the first two Harry Potter movies?",
+                answers: {
+                    a: "Michael Gambon",
+                    b: "Alan Rickman",
+                    c: "Richard Harris",
+                    d: "Daniel Radcliffe",
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "What color was Luke's second lightsaber?",
+                answers: {
+                    a: "purple",
+                    b: "blue",
+                    c: "red",
+                    d: "green",
+                },
+                correctAnswer: "d"
             }
         ];
 
