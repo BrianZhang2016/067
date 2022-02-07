@@ -257,6 +257,22 @@ def hearthstoneapi():
 def tictactoe():
     return render_template("tictactoe.html")
 
+@app.route("/action")
+def action():
+    return render_template("action.html")
+
+@app.route("/comedypage")
+def comedypage():
+    return render_template("comedypage.html")
+
+@app.route("/dramapage")
+def dramapage():
+    return render_template("dramapage.html")
+
+@app.route("/genre")
+def genre():
+    return render_template("genre.html")
+
 @app.route("/gamequiz")
 def gamequiz():
     return render_template("gamequiz.html")
