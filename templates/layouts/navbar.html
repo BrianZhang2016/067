@@ -2,9 +2,12 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <head>
-    <script>
-
-    </script>
+    <style>
+        darkSwitch {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -75,14 +78,34 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/arcade">Movies</a>
                                 <a class="dropdown-item" href="/arcade2">TV Shows</a>
-                                <a class="dropdown-item" href="/stub">Temp Review</a>
-                                <a class="dropdown-item" href={{ url_for('colorCode') }}>Temp Review 2</a>
-
+                                <a class="dropdown-item" href={{ url_for('genre') }}>Genres</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="btn-group">
+            <!-- Search Box -->
+            <div class="px-3">
+                <input id="search" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <!-- Clock display -->
+            <div class="px-3 text-dark">
+                <span id="clock"></span>
+            </div>
+            <!-- Dark mode action -->
+            <div class="form-check form-switch">
+                <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
+                <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+            </div>
+        </div>
+
+        {% block navbar_script %}
+            <!-- Navigation bar JavaScript support -->
+            <script src={{  url_for("static", filename="javascript/navbar.js", version='140') }}></script>
+        {% endblock %}
+
         </div>
     </nav>
 </body>

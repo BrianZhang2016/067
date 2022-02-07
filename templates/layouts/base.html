@@ -33,11 +33,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             font-size: 1vw;
         }
 
-        .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
-        }
-
         .hoverclick1{
             background: url('../static/assets/tm067logo.png') no-repeat;
             cursor:pointer;
@@ -105,11 +100,17 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             margin: auto;
         }
 
+        dark-mode {
+            background-color: #262626;
+            color: white;
+        }
+
 
 
 
 
     </style>
+
 
     <title>{{ basename }} | {{ project }} </title>
 
@@ -161,7 +162,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </div>
             {% endblock %}
         </div>
-
     </div>
 </div>
 {% endblock %}
