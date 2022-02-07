@@ -1,0 +1,52 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    <div class="container-fluid">
+    <h1>Genres</h1>
+    <div class="row">
+        <div class="col" style="background-color:#037a76;">
+            <div class="card" style="width:400px">
+                <img style="width:400px; height:230px" src="static/assets/actionpage.png">
+                <div class="card-body">
+                    <h4 class="card-title" style="color:blue">Action</h4>
+                    <p class="card-text" style="color:blue"> Action films are a film genre where action sequences, such as fighting, stunts, car chases or explosions, take precedence over elements like characterization or complex plotting. The action typically involves individual efforts on the part of the hero, in contrast with most war films.</p>
+                    <button style="font-size:30px; background-color: #ed1b76; margin-left:30%">
+                        <a href="action"> View More </a>
+                    </button>
+                </div>
+            </div></div>
+
+        <div class="col" style="background-color:#037a76;">
+            <div class="card" style="width:400px">
+                <img style="width:400px; height:230px" src="static/assets/comedypage.png">
+                <div class="card-body">
+                    <h4 class="card-title" style="color:blue">Comedy</h4>
+                    <p class="card-text" style="color:blue">
+                        The comedy genre humorously exaggerates the situation, the language, action, and characters. Comedies observe the deficiencies, foibles, and frustrations of life, providing merriment and a momentary escape from day-to-day life. They usually have happy endings, although the humor may have a serious or pessimistic side.</p>
+                    <button style="font-size:30px; background-color: #ed1b76; margin-left:30%">
+                        <a href="comedypage"> View More </a>
+                    </button>
+                </div>
+            </div></div>
+
+        <div class="col" style="background-color:#037a76;">
+            <div class="card" style="width:400px">
+                <img style="width:400px; height:230px" src="static/assets/dramapage.png">1.532
+                <div class="card-body">
+                    <h4 class="card-title" style="color:blue">Drama</h4>
+                    <p class="card-text" style="color:blue"> Drama Films are serious presentations or stories with settings or life situations that portray realistic characters in conflict with either themselves, others, or forces of nature. A dramatic film shows us human beings at their best, their worst, and everything in-between.</p>
+                    <button style="font-size:30px; background-color: #ed1b76; margin-left:30%">
+                        <a href="dramapage"> View More </a>
+                    </button>
+                </div>
+            </div></div>
+    </div>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
