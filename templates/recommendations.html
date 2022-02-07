@@ -1,0 +1,49 @@
+{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+{% block body%}
+<style>
+  .movies {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .movie {
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-around;
+  }
+  .movie .text {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .text p {
+    font-size: 13px
+  }
+  .movie img {
+    width: 40%;
+    border: 2px solid blue;
+  }
+</style>
+
+<h1> Webpage Title </h1>
+<div class="movies">
+  {% for x in output %}
+  <div class="movie">
+      <div class="poster">
+          <img src="https://image.tmdb.org/t/p/original{{output[x]['poster']}}" alt="">
+      </div>
+      <div class="text">
+        <h3>{{output[x]["title"]}}</h3>
+        <p>{{output[x]["plot"]}}</p>
+      </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+</html>
