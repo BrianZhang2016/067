@@ -154,8 +154,9 @@
             }
             console.log(indexes)
 
-            myQuestions.forEach(
-                (currentQuestion, questionNumber) => {
+            for (ind = 0; ind < indexes.length; ind++) {
+                currentQuestion = myQuestions[indexes[ind]]
+                questionNumber = ind
 
                     const answers = [];
 
@@ -164,21 +165,19 @@
 
                         answers.push(
                             `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}">
-                ${letter} :${currentQuestion.answers[letter]}
-            </label>`
-                        );
+                          <input type="radio" name="question${questionNumber}" value="${letter}">
+                            ${letter} :${currentQuestion.answers[letter]}
+                            </label>`);
                     }
 
                     output.push(
                         `<div class="question"> ${currentQuestion.question} </div>
-          <div class="answers"> ${answers.join('')} </div>`
-                    );
-                }
-            );
+                    <div class="answers"> ${answers.join('')} </div>`);
 
             quizContainer.innerHTML = output.join('');
+            }
         }
+
 
         function showResults(){
 
@@ -187,7 +186,9 @@
             let numCorrect = 0;
 
             // for each question...
-            myQuestions.forEach( (currentQuestion, questionNumber) => {
+            for (ind = 0; ind < indexes.length; ind++) {
+                currentQuestion = myQuestions[indexes[ind]]
+                questionNumber = ind
 
                 // find selected answer
                 const answerContainer = answerContainers[questionNumber];
@@ -207,10 +208,10 @@
                     // color the answers red
                     answerContainers[questionNumber].style.color = '#ed1b2d';
                 }
-            });
+            };
 
             // show number of correct answers out of total
-            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+            resultsContainer.innerHTML = `${numCorrect} out of ${indexes.length}`;
         }
 
         const quizContainer = document.getElementById('quiz');
