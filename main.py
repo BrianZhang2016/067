@@ -348,6 +348,22 @@ def page_not_found(e):
 def arcade2():
     return render_template("arcade2.html")
 
+@app.route("/genre")
+def genre():
+    return render_template("genre.html")
+
+@app.route("/action")
+def action():
+    return render_template("action.html")
+
+@app.route("/comedypage")
+def comedypage():
+    return render_template("comedypage.html")
+
+@app.route("/dramapage")
+def dramapage():
+    return render_template("dramapage.html")
+
 @app.route("/movieapi")
 def movieapi():
 
