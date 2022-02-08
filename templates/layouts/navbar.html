@@ -5,6 +5,66 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <script>
 
     </script>
+    <style>
+        nav.navbar {
+            position: relative;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::before {
+            position: absolute;
+            border-bottom: 2px solid transparent;
+            content: "";
+            left: 0%;
+            right: 0;
+            bottom: 0;
+        }
+        .nav-link:hover::before {
+            animation-name: border-move;
+            animation-duration: 0.8s;
+            border-bottom: 2px solid #ed1c76;
+        }
+        @keyframes border-move {
+            0% {
+                right: 100%;
+                left: 100%;
+            }
+            100% {
+                right: 0%;
+                left: 0%;
+            }
+        }
+        #form-group {
+            position: absolute;
+            padding: 1.5em;
+            background-color: var(--white);
+            width: 25%;
+            top: 50px;
+            z-index: 5
+        }
+        #form-group input, #form-group button {
+            width: 100%;
+        }
+        #result {
+            color: var(--turqoise)
+        }
+        .searchTable {
+            table-layout: fixed;
+            width: 100%;
+        }
+        .searchTable td, .searchTable th {
+            border: 2px solid var(--turqoise);
+            padding: 0.5em;
+            word-wrap: break-word;
+        }
+        .toggle-container {
+            margin-left: 800px;
+            margin-top: 10px;
+            text-align: right;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +86,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                                 Greet Pages
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href={{ url_for('zachgreet') }}>Zachary's Greet</a>
+                                <a class="dropdown-item" href="/zachgreet">Zachary's Greet</a>
                                 <a class="dropdown-item" href="/briangreet">Brian's Greet</a>
                                 <a class="dropdown-item" href="/stanley">Stanley's Greet</a>
                                 <a class="dropdown-item" href="/leo">Leo's Greet</a>
@@ -81,11 +141,134 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
                             </div>
                         </li>
+                        <div style="display: flex; align-items: center" onclick="showSearch()">
+                            <i style="color: black" class="fas fa-search"></i>
+                        </div>
+                        <div id="form-group" class="form-group" style="display: none">
+                            <input type="text" style="margin-bottom: 15px;" class="form-control" id="term" placeholder="enter search term" autocomplete="off">
+                            <button onclick="search_data()" id="searchButton" style="margin-bottom: 15px">Search Data</button>
+                            <div class="resultsContainer" style="color: var(--turqoise)">
+<!--                                 <div class="column" id="result"> -->
+<!--                                 </div> -->
+                                <table class="searchTable">
+                                <tr>
+                                    <th> Class </th>
+                                    <th> Teacher </th>
+                                    <th> Students </th>
+                                </tr>
+                                </table>
+                                <table id="result" class="searchTable">
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="toggle-container">
+                            <input type="checkbox" id="darkSwitch" name="theme" /><label for="switch"> Dark Mode</label>
+                        </div>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
+    <script>
+     const darkSwitch=document.getElementById("darkSwitch");
+// establishes the initial state of darkSwitch on page load
+if(darkSwitch) {
+    // obtains the value of darkSwitch from localStorage
+    const darkSwitchSelected =
+        localStorage.getItem("darkSwitch") !== null &&
+        localStorage.getItem("darkSwitch") === "dark";
+    // sets the value of darkSwitch.checked to the global darkSwitch
+    darkSwitch.checked=darkSwitchSelected;
+    // if dark-mode, toggle the switch to dark-mode position
+    if (darkSwitchSelected)
+        document.body.classList.toggle("dark-mode");
+}
+// executes on each "dark mode" UI toggle
+function darkFunction() {
+    // toggles between off (standard CSS) and dark-mode (.dark-mode CSS)
+    document.body.classList.toggle("dark-mode");
+    // localStorage is used to manage darkSwitch status
+    darkSwitch.checked
+        ? localStorage.setItem("darkSwitch","dark")
+        : localStorage.removeItem("darkSwitch");
+}
+
+            var input = document.getElementById("term");
+            input.addEventListener("keyup", function(event){
+                if (event.keyCode == 13) {
+                    document.getElementById("searchButton").click();
+                }
+
+            })
+            const search = document.getElementById('googleSearch');
+            const google = 'https://www.google.com/search?q=site%3A+';
+            const site = 'https://nighthawkcodingsociety.com';
+            function submitted(event) {
+              if (event.key === 'Enter') {
+                 event.preventDefault();
+                 const url = google
+                             + site
+                             + '+'
+                             + search.value;
+                             const win = window.open(url, '_blank');
+                             win.focus();
+              }
+            }
+            search.addEventListener('keypress', submitted);
+            function showSearch() {
+                if (document.getElementById("form-group").style.display == "none") {
+                    document.getElementById("form-group").style.display = "block"
+                } else {
+                    document.getElementById("form-group").style.display = "none"
+                }
+            }
+            function search_data() {
+                // fetch standard requires data set to a name-value pair
+                const term = document.getElementById("term");
+                const body = {
+                    term: term.value
+                };
+
+                // fetch call with header options
+                fetch('/crud/search/term/', {
+                    method: "POST",
+                    credentials: "include",
+                    body: JSON.stringify(body),
+                    cache: "no-cache",
+                    headers: new Headers({
+                        "content-type": "application/json"
+                    })
+                })
+                // async then replies with response header
+                .then(function (response) {
+                    // prepare HTML search result container for new output
+                    const resultContainer = document.getElementById("result");
+                    // clean up from previous search
+                    while (resultContainer.firstChild) {
+                        resultContainer.removeChild(resultContainer.firstChild);
+                    }
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                        const errorMsg = 'Database response error: ' + response.status;
+                        console.log(errorMsg);
+                        const div = document.createElement("div");
+                        div.innerHTML = errorMsg;
+                        resultContainer.appendChild(div);
+                        return;
+                    }
+                    // response contains valid result
+                    response.json().then(function(data) {
+                        // loop through JSON and build HTML output
+                        for (let i = 0; i < data.length; i++) {
+                            const row = document.createElement("tr");
+                            row.innerHTML = '<td>' + data[i].className + '</td> <td>' + data[i].teacher + '</td> <td>' + data[i].studentsEnrolled + "</td>";
+                            resultContainer.appendChild(row);
+                        }
+                    })
+                })
+            }
+    </script>
 </body>
 
 
