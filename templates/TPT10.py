@@ -1,4 +1,5 @@
 
+print("Swap")
 ageOne = 21
 ageTwo = 16
 
@@ -14,8 +15,11 @@ thing1,thing2 = swapAge(ageOne, ageTwo)
 
 print(thing1,thing2)
 
+print("-----")
+
+print("Matrix")
 #matrix
-matrix = [(1,2,3),(4,5,6),(7,8,9)]
+matrix = [(1,2,3),(4,5,6),(7,8,9), (" ",0," ")]
 for x in matrix:
     for y in x:
         print(y, end = " ")
