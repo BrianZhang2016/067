@@ -7,7 +7,7 @@
 #### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
 
 ## Jekyll
-#### Here is our [Jekyll](http://readme.team067.tk) page!
+#### Here is our [Jekyll](https://brianzhang2016.github.io/067/) page!
 
 ## Table Of Contents
 | Week Number |
