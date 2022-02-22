@@ -11,9 +11,9 @@ def swapAge (ageOne, ageTwo):
     ageTwo = storAge
     return ageOne, ageTwo
 
-thing1,thing2 = swapAge(ageOne, ageTwo)
+age1,age2 = swapAge(ageOne, ageTwo)
 
-print(thing1,thing2)
+print(age1,age2)
 
 print("-----")
 

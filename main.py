@@ -337,6 +337,10 @@ def page_not_found(e):
 def arcade2():
     return render_template("arcade2.html")
 
+@app.route("/simonsays")
+def simonsays():
+    return render_template("simonsays.html")
+
 # @app.route("/recommendations")
 # def recommendations():
 #     output = recommendation()
