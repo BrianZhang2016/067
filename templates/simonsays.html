@@ -103,12 +103,12 @@ body {
                 sequenceToGuess = [...sequence];
                 startFlashing();
                 if(sequence.length === 10){
-                    //end game
+                    //end game, repeated all sequence
                     alert("You Won!");
                 }
             }
         } else {
-            //end game
+            //end game, failed to repeat sequence
             alert("Game Over");
         }
     };
