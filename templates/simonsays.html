@@ -102,6 +102,10 @@ body {
                 sequence.push(getRandomPanel());
                 sequenceToGuess = [...sequence];
                 startFlashing();
+                if(sequence.length === 10){
+                    //end game
+                    alert("You Won!");
+                }
             }
         } else {
             //end game
@@ -125,6 +129,8 @@ body {
         }
     };
     main();
+
+
 </script>
 </body>
 </html>
