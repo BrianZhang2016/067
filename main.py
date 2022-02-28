@@ -6,11 +6,16 @@ import requests
 from __init__ import app
 from crud2.crud_app import app_crud1
 from crud2.crud_app import app_crud1
+from aboutus import aboutus
 from crud2.app_crud_api import app_crud_api
-
+import math
+import os
 # create a Flask instance
 #app = Flask(__name__)
+# from recommendations import recommendation
+
 app.register_blueprint(app_crud1)
+app.register_blueprint(aboutus)
 
 
 # connects default URL to render index.html
@@ -19,45 +24,9 @@ def index():
     return render_template("index.html")
 
 
-
 @app.route('/stub/')
 def Stub():
     return render_template("stub.html")
-
-@app.route('/zachgreet', methods=['GET', 'POST'])
-def zachgreet():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("zachary_greet.html", name=name)
-    # starting and empty input default
-    return render_template("zachary_greet.html", name="World")
-
-@app.route('/briangreet', methods=['GET', 'POST'])
-def briangreet():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("briangreet.html", name=name)
-    # starting and empty input default
-    return render_template("briangreet.html", name="World")
-
-@app.route('/stanley', methods=['GET', 'POST'])
-def stanley():
-    url = "https://valorant-weapons.p.rapidapi.com/Sidearms"
-
-    headers = {
-        'x-rapidapi-host': "valorant-weapons.p.rapidapi.com",
-        'x-rapidapi-key': "f843e28f92mshd3de980258688f8p118a28jsn305a11f8326b"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-
-    output = json.loads(response.text)
-
-    return render_template("stanley.html", Sidearms=output)
 
 @app.route('/Mini-labs/')
 def video():
@@ -138,6 +107,10 @@ def logicGates():
 @app.route("/spaceClick")
 def spaceClick():
     return render_template("spaceClick.html")
+
+@app.route("/github_readme")
+def github_readme():
+    return render_template("github_readme.html")
 
 @app.route("/arcade")
 def arcade():
@@ -287,6 +260,22 @@ def hearthstoneapi():
 def tictactoe():
     return render_template("tictactoe.html")
 
+@app.route("/action")
+def action():
+    return render_template("action.html")
+
+@app.route("/comedypage")
+def comedypage():
+    return render_template("comedypage.html")
+
+@app.route("/dramapage")
+def dramapage():
+    return render_template("dramapage.html")
+
+@app.route("/genre")
+def genre():
+    return render_template("genre.html")
+
 @app.route("/gamequiz")
 def gamequiz():
     return render_template("gamequiz.html")
@@ -348,6 +337,15 @@ def page_not_found(e):
 def arcade2():
     return render_template("arcade2.html")
 
+@app.route("/simonsays")
+def simonsays():
+    return render_template("simonsays.html")
+
+# @app.route("/recommendations")
+# def recommendations():
+#     output = recommendation()
+#     return render_template("recommendations.html",output=output)
+
 @app.route("/movieapi")
 def movieapi():
 
@@ -366,24 +364,7 @@ def movieapi():
 
     return render_template("movieapi.html", Movie=output)
 
-@app.route('/leo', methods=['GET', 'POST'])
-def leo():
 
-
-    url = "https://weatherapi-com.p.rapidapi.com/current.json"
-
-    querystring = {"q":"32.7157,-117.1611"}
-
-    headers = {
-        'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
-        'x-rapidapi-key': "e0ad7aa5d6msh9dce61ba4b05901p1b8266jsn87d4e268c462"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-
-    output = json.loads(response.text)
-
-    return render_template("leo.html", Weather=output)
 
 # runs the application on the development server
 if __name__ == "__main__":

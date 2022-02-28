@@ -40,11 +40,29 @@
             color: var(--black);
         }
 
-        .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
-        }
+        <div class="btn-group">
+        <!-- Search Box -->
+        <div class="px-3">
+                         <input id="search" type="search" placeholder="Search" aria-label="Search">
+                                                                                                  </div>
+        <!-- Clock display -->
+        <div class="px-3 text-dark">
+                                   <span id="clock"></span>
+                                                      </div>
+        <!-- Dark mode action -->
+        <div class="form-check form-switch">
+                                           <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
+                                                                                                                                   <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+                                                                                                                                                                                                   </div>
+                                                                                                                                                                                                     </div>
 
+                                                                                                                                                                                                       {% block navbar_script %}
+                                                                                                                                                                                                           <!-- Navigation bar JavaScript support -->
+                                                                                                                                                                                                           <script src={{  url_for("static", filename="javascript/navbar.js", version='140') }}></script>
+                                                                                                                                                                                                       {% endblock %}
+
+                                                                                                                                                                                                       </div>
+                                                                                                                                                                                                         </nav>
         h1{
             font-size: 5em;
         }

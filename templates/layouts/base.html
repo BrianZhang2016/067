@@ -11,6 +11,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/561a0d84b8.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,9 +34,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             font-size: 1vw;
         }
 
-        .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
+        .hoverclick1{
+            background: url('../static/assets/tm067logo.png') no-repeat;
+            cursor:pointer;
+            width:428px;
+            height:158px;
+            transform: translateY(3px);
+            outline-style: none;
         }
 
         h1{
@@ -96,9 +101,17 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             margin: auto;
         }
 
+        dark-mode {
+            background-color: #262626;
+            color: white;
+        }
+
+
+
 
 
     </style>
+
 
     <title>{{ basename }} | {{ project }} </title>
 
@@ -111,6 +124,18 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
+    <div class="container-fluid" style="background-image: url('/static/assets/moviesbackground.png'); height: 100%; width: 100%;">
+        <div class="row justify-content-end" style="padding: 2%;">
+            <div class="col-2" style="text-align: right;">
+                {% block info %}
+                    <!-- notice jinja style variables used in href's -->
+                    <a><h5>{{basename}}</h5></a>
+                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
+                    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
+                {% endblock %}
+            </div>
+        </div>
 
 
     <div class="product" style="margin-top: 8%; padding-left: 5%;" >
@@ -118,7 +143,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
             <div class="col-8" style="font-size: 20pt" >
-                <h1>Team 067</h1>
+                <input type="button" id="mature1" class="fa hoverclick1" onclick="location.href = 'about_us';" style= "margin-top:10%">
             </div>
 
         </div>
@@ -126,7 +151,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="position: relative; padding-bottom: 10%">
             {% block links %}
             <div class="col-4">
-                <a href="{{'about_us'}}" class="btn">About Us</a>
+            <a href="{{'moviequiz'}}" class="btn">Movie Quiz</a>
             </div>
 
             <div class="col-4">
@@ -138,7 +163,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </div>
             {% endblock %}
         </div>
-
     </div>
 </div>
 {% endblock %}
