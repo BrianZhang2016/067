@@ -7,11 +7,16 @@
 #### To organize and highlight our projects through weekly sprints that connect to our PBL. This is shown through commits, tangibles and videos which are organized by the week to showcase work.
 
 ## Jekyll
-#### Here is our [Jekyll](http://readme.team067.tk) page!
+#### Here is our [Jekyll](https://brianzhang2016.github.io/067/) page!
 
 ## Table Of Contents
 | Week Number |
 | ------------- | 
+| [Week 11](#Week-11)    |
+| [Week 10](#Week-10)    | 
+| [Week 9](#Week-9)    | 
+| [Week 8](#Week-8)    | 
+| [Week 7](#Week-7)    | 
 | [Mid Term&Vocab](#Mid-Term)    | 
 | [Week 5](#Week-5)    | 
 | [Week 4](#Week-4)    | 
@@ -50,14 +55,72 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 ### Sprint Overview
 | Week Number | Issue List                                              |
 | ------------- | -------------------------------------------------------------------------|
-| Sprint 4, 5 (Week 5)|[PBL showing the How, Theme, Technicals](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+5+PBL+How+Theme+Technicals%22+)        |
+| Sprint 11 (Week 11)|[PBL Final](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+11+PBL+Final%22)   |
+| Sprint 10 (Week 10)|[Final Exam](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+10-+Final+Exam%22)   |
+| Sprint 9 (Week 9)|[Create Task Check](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+9+Create+Task+Check%22)   |
+| Sprint 8 (Week 8)|[Crossover Coding](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+8+Crossover+Coding%22)   |
+| Sprint 7 (Week 7)|[PBL How, Theme, Technicals](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+7+PBL+How+Theme+Technicals%22)   |
+| Sprint 6 (Week 6)|[Mid Term](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+6%22)   |
+| Sprint 4, 5 (Week 5)|[PBL showing the How, Theme, Technicals](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+5+PBL+How+Theme+Technicals%22+)   |
 | Sprint 4, 5 (Week 4)|[Python Database Modeling](https://github.com/BrianZhang2016/067/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+4+Python+Database+Modeling%22)        |
 | Sprint 3 (Week 3)|     [WIP Project Review](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+3+WIP+Project+Review%22+)        |
 | Sprint 1, 2 (Week 2)   |     [Home Pages](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+2+Home+Pages%22)        |
 | Sprint 1, 2 (Week 1)   |     [Project Approval](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22)       |
 | Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+0+Design+and+Organize%22)       |
 
-### Mid Term
+### Week 11
+| Video | [Link](https://youtu.be/alDoa2L-KWc) | 
+| ------------- | -------------------------------------------------------------|
+
+
+[Back](#Table-Of-Contents) 
+
+
+### Week 10
+| Member | Tangables | 
+| ------------- | -------------------------------------------------------------|
+| Brian&Zach | [Wiki](https://github.com/BrianZhang2016/067/wiki/PBL-Feature-with-Create-Performance-Task-(Brian&Zach)) | 
+| Leo&Stanley  | [Wiki](https://github.com/BrianZhang2016/067/wiki/PBL-Feature-with-Create-Performance-Task-(Leo&Stanley)) |
+
+
+[Back](#Table-Of-Contents) 
+
+
+
+### Week 9
+| Member | Tangables | 
+| ------------- | -------------------------------------------------------------|
+| Brian&Zach | [Wiki](https://github.com/BrianZhang2016/067/wiki/PBL-Feature-with-Create-Performance-Task-(Brian&Zach)) | 
+| Leo&Stanley  | [Wiki](https://github.com/BrianZhang2016/067/wiki/PBL-Feature-with-Create-Performance-Task-(Leo&Stanley)) |
+
+
+[Back](#Table-Of-Contents) 
+
+
+### Week 8
+| Member | Tangables | 
+| ------------- | -------------------------------------------------------------|
+| Zach | [Issue](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+8+Crossover+Coding%22+assignee%3Azachye111) | 
+| SanjayB06  | [Issue](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+8+Crossover+Coding%22+assignee%3ASanjayB06) |
+| leahsaph123   | [Issue](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+8+Crossover+Coding%22+assignee%3Aleahsaph123) |
+| SimonBrunzell    | [Issue](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+8+Crossover+Coding%22+assignee%3ASimonBrunzell) |
+| vunsh     | [Issue](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+8+Crossover+Coding%22+assignee%3Avunsh) |
+
+
+[Back](#Table-Of-Contents) 
+
+
+### Week 7
+| Crossover | 
+| ------------- | 
+| [Video](https://github.com/BrianZhang2016/067/issues/52) | 
+| [Ticket](https://github.com/BrianZhang2016/067/issues/51) |
+
+
+[Back](#Table-Of-Contents) 
+
+
+### Mid Term 
 | Member | Wiki's | 
 | ------------- | -------------------------------------------------------------|
 | Leo&Stanley | [Wiki](https://github.com/BrianZhang2016/067/wiki/Vocab-Competency-Brian&Zach)  | 
@@ -69,8 +132,8 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 ### Week 5
 | Member | Tangables | 
 | ------------- | -------------------------------------------------------------|
-| Brian |  [Issue](https://github.com/BrianZhang2016/067/issues/46) | 
-| Leo |  [Issue](https://github.com/BrianZhang2016/067/issues/47) | 
+| Brian |  [Issue](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+5+PBL+How+Theme+Technicals%22+assignee%3ABrianZhang2016+) | 
+| Leo |  [Issue](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+5+PBL+How+Theme+Technicals%22+assignee%3Alleosunn) | 
 
 
 

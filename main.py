@@ -112,6 +112,10 @@ def logicGates():
 def spaceClick():
     return render_template("spaceClick.html")
 
+@app.route("/github_readme")
+def github_readme():
+    return render_template("github_readme.html")
+
 @app.route("/arcade")
 def arcade():
     return render_template("arcade.html")
@@ -336,6 +340,10 @@ def page_not_found(e):
 @app.route("/arcade2")
 def arcade2():
     return render_template("arcade2.html")
+
+@app.route("/simonsays")
+def simonsays():
+    return render_template("simonsays.html")
 
 # @app.route("/recommendations")
 # def recommendations():
