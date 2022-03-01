@@ -69,8 +69,13 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+0+Design+and+Organize%22)       |
 
 ### Week 11
-| Video | [Link](https://youtu.be/alDoa2L-KWc) | 
+| Member | Review Ticket | 
 | ------------- | -------------------------------------------------------------|
+| Brian | [Ticket](https://github.com/BrianZhang2016/067/issues/64) | 
+| Leo | [Ticket](https://github.com/BrianZhang2016/067/issues/65) | 
+| Stanley | [Ticket](https://github.com/BrianZhang2016/067/issues/67) | 
+| Zach | [Ticket](https://github.com/BrianZhang2016/067/issues/66) | 
+| Video | [Link](https://youtu.be/alDoa2L-KWc) | 
 
 
 [Back](#Table-Of-Contents) 
