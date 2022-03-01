@@ -28,6 +28,10 @@ def index():
 def Stub():
     return render_template("stub.html")
 
+@app.route('/stanley2')
+def stanley2():
+    return render_template("stanley2.html")
+
 @app.route('/quiz')
 def quiz():
     return render_template("quiz.html")
