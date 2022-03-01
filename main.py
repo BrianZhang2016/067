@@ -28,6 +28,10 @@ def index():
 def Stub():
     return render_template("stub.html")
 
+@app.route('/quiz')
+def quiz():
+    return render_template("quiz.html")
+
 @app.route('/Mini-labs/')
 def video():
     return render_template("Mini-labs.html")
