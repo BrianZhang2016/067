@@ -76,6 +76,7 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Stanley | [Ticket](https://github.com/BrianZhang2016/067/issues/67) | 
 | Zach | [Ticket](https://github.com/BrianZhang2016/067/issues/66) | 
 | Video | [Link](https://youtu.be/alDoa2L-KWc) | 
+| N@TM | [Wiki](https://github.com/BrianZhang2016/067/wiki/N@TM) | 
 
 
 [Back](#Table-Of-Contents) 
