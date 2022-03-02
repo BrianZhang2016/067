@@ -102,7 +102,7 @@ body {
                 sequence.push(getRandomPanel());
                 sequenceToGuess = [...sequence];
                 startFlashing();
-                if(sequence.length === 10){
+                if(sequence.length === 11){ //add extra 1 to wanted sequence to win
                     //end game, repeated all sequence
                     alert("You Won!");
                 }
